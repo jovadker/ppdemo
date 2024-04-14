@@ -7,7 +7,7 @@ on:
 
 env:
   solution_name: mpa_Kudos
-  solution_source_folder: mpa_Kudos
+  solution_source_folder: src
   solution_outbound_folder: out/solutions
   solution_release_folder: out/release
 jobs:
