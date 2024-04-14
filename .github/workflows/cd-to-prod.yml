@@ -1,4 +1,4 @@
-name: CD to Prod
+name: CD-to-Prod
 
 # Controls when the workflow will run
 on:
