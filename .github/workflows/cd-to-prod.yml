@@ -6,7 +6,7 @@ on:
 
 env:
   kudos_solution_name: mpa_Kudos
-  experience_solution_name: mpa_Kudos
+  experience_solution_name: mpa_EmployeeExperienceBase
   solution_source_folder: src
   solution_outbound_folder: out/solutions
   solution_release_folder: out/release
