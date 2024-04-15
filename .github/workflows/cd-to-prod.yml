@@ -6,41 +6,51 @@ on:
   workflow_dispatch:
 
 env:
-  solution_name: mpa_Kudos
+  kudos_solution_name: mpa_Kudos
+  experience_solution_name: mpa_Kudos
   solution_source_folder: src
   solution_outbound_folder: out/solutions
   solution_release_folder: out/release
+
 jobs:
+  build-and-pack-solution:
+    name: Build and Pack Solution for Employee Experience Base
+    uses: jovadker/ppdemo/.github/workflows/build-and-pack-solution.yml@main
+    with:
+      solution_name: mpa_EmployeeExperienceBase
+      solution_source_folder: src/mpa_EmployeeExperienceBase
+      solution_outbound_folder: out/solutions
+      
   convert-to-managed:
-   runs-on: windows-latest
+   runs-on: ubuntu-latest
    steps:
    - uses: actions/checkout@v2
      with:
        lfs: true
-   - name: Pack managed solution
+   - name: Pack unmanaged solution Kudos
      uses: microsoft/powerplatform-actions/pack-solution@v0
      with:
-       solution-folder: ${{ env.solution_source_folder}}/${{ env.solution_name }}
-       solution-file: ${{ env.solution_outbound_folder}}/${{ env.solution_name }}_managed.zip
+         solution-folder: src/${{ env.kudos_solution_name }}/${{ env.solution_source_folder}}
+         solution-file: ${{ env.solution_outbound_folder}}/${{ env.kudos_solution_name }}_unmanaged.zip
+         solution-type: Unmanaged
+   - name: Pack managed solution Kudos
+     uses: microsoft/powerplatform-actions/pack-solution@v0
+     with:
+       solution-folder: src/${{ env.kudos_solution_name }}/${{ env.solution_source_folder}}
+       solution-file: ${{ env.solution_outbound_folder}}/${{ env.kudos_solution_name }}_managed.zip
        solution-type: Managed
-   - name: Pack unmanaged solution
-     uses: microsoft/powerplatform-actions/pack-solution@v0
-     with:
-       solution-folder: ${{ env.solution_source_folder}}/${{ env.solution_name }}
-       solution-file: ${{ env.solution_outbound_folder}}/${{ env.solution_name }}_unmanaged.zip
-       solution-type: Unmanaged
-   - name: Upload the unmanaged solution to GH artifact store
+   - name: Upload the unmanaged solution to GH artifact store 
      uses: actions/upload-artifact@v2
      with:
        name: unmanagedSolutions
-       path: ${{ env.solution_outbound_folder}}/${{ env.solution_name }}_unmanaged.zip             
+       path: ${{ env.solution_outbound_folder}}/${{ env.kudos_solution_name }}_unmanaged.zip             
    - name: Upload the managed solution to GH artifact store
      uses: actions/upload-artifact@v2
      with:
        name: managedSolutions
-       path: ${{ env.solution_outbound_folder}}/${{ env.solution_name }}_managed.zip 
+       path: ${{ env.solution_outbound_folder}}/${{ env.kudos_solution_name }}_managed.zip 
 
-  release-to-staging:
+  release-to-prod:
     needs: [ convert-to-managed ]
     runs-on: ubuntu-latest
     steps:
@@ -55,6 +65,16 @@ jobs:
     - run: |
         cd ${{ env.solution_release_folder}}
         dir
+    - name: Import Employee Experience solution to prod environment
+      uses: microsoft/powerplatform-actions/import-solution@v0
+      with:
+        environment-url: "https://orgae9e123c.crm.dynamics.com"
+        app-id: ${{secrets.PPAPPID}}
+        client-secret: ${{ secrets.PPAPPSECRET }}
+        tenant-id: ${{secrets.PPTENANTID}}
+        solution-file: ${{ env.solution_release_folder}}/${{ env.experience_solution_name }}_managed.zip
+        run-asynchronously: true
+  
     - run: |
         newDataverseId="cc54b39cf98e41e0969dfdd7b90e2e6a"
         newO365Id="4b143239cbbc4443a43466481bc39586"
@@ -65,13 +85,13 @@ jobs:
          elif .ConnectionId == "[Outlook]" then .ConnectionId = $outlookId
         else . end' > temp.json && mv temp.json deploymentSettings.json
   
-    - name: Import solution to test env
+    - name: Import Kudos solution to prod environment with deployment settings
       uses: microsoft/powerplatform-actions/import-solution@v0
       with:
         environment-url: "https://orgae9e123c.crm.dynamics.com"
         app-id: ${{secrets.PPAPPID}}
         client-secret: ${{ secrets.PPAPPSECRET }}
         tenant-id: ${{secrets.PPTENANTID}}
-        solution-file: ${{ env.solution_release_folder}}/${{ env.solution_name }}_managed.zip
+        solution-file: ${{ env.solution_release_folder}}/${{ env.kudos_solution_name }}_managed.zip
         deployment-settings-file: ${{ env.solution_source_folder}}/deploymentSettings.json
         run-asynchronously: true

@@ -1,0 +1,41 @@
+on:
+    workflow_call:
+      inputs:
+        solution_name:
+          required: true
+          type: string
+          description: "solution name"
+        solution_source_folder: 
+         required: true
+         type: string
+         description: "solution source folder"
+        solution_outbound_folder:
+         required: true
+         type: string
+         description: "solution outbound folder"
+jobs:
+    installpac:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Pack unmanaged solution Kudos
+          uses: microsoft/powerplatform-actions/pack-solution@v0
+          with:
+           solution-folder: src/${{ inputs.solution_name }}/${{ inputs.solution_source_folder}}
+           solution-file: ${{ inputs.solution_outbound_folder}}/${{ inputs.solution_name }}_unmanaged.zip
+           solution-type: Unmanaged
+        - name: Pack managed solution Kudos
+          uses: microsoft/powerplatform-actions/pack-solution@v0
+          with:
+           solution-folder: src/${{ inputs.solution_name }}/${{ inputs.solution_source_folder}}
+           solution-file: ${{ inputs.solution_outbound_folder}}/${{ inputs.solution_name }}_managed.zip
+           solution-type: Managed
+        - name: Upload the unmanaged solution to GH artifact store 
+          uses: actions/upload-artifact@v2
+          with:
+           name: unmanagedSolutions
+           path: ${{ inputs.solution_outbound_folder}}/${{ inputs.solution_name }}_unmanaged.zip             
+        - name: Upload the managed solution to GH artifact store
+          uses: actions/upload-artifact@v2
+          with:
+           name: managedSolutions
+           path: ${{ inputs.solution_outbound_folder}}/${{ inputs.solution_name }}_managed.zip 
