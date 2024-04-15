@@ -21,13 +21,13 @@ jobs:
           with:
            lfs: true
         - name: Pack unmanaged solution Kudos
-          uses: microsoft/powerplatform-actions/pack-solution@v0
+          uses: microsoft/powerplatform-actions/pack-solution@v1
           with:
            solution-folder: ${{ inputs.solution_source_folder}}
            solution-file: ${{ inputs.solution_outbound_folder}}/${{ inputs.solution_name }}_unmanaged.zip
            solution-type: Unmanaged
         - name: Pack managed solution Kudos
-          uses: microsoft/powerplatform-actions/pack-solution@v0
+          uses: microsoft/powerplatform-actions/pack-solution@v1
           with:
            solution-folder: ${{ inputs.solution_source_folder}}
            solution-file: ${{ inputs.solution_outbound_folder}}/${{ inputs.solution_name }}_managed.zip

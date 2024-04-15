@@ -25,14 +25,17 @@ jobs:
    needs: [ build-and-pack-solution-ee ]
    runs-on: ubuntu-latest
    steps:
+   - uses: actions/checkout@v2
+     with:
+       lfs: true
    - name: Pack unmanaged solution Kudos
-     uses: microsoft/powerplatform-actions/pack-solution@v0
+     uses: microsoft/powerplatform-actions/pack-solution@v1
      with:
          solution-folder: src/${{ env.kudos_solution_name }}/${{ env.solution_source_folder}}
          solution-file: ${{ env.solution_outbound_folder}}/${{ env.kudos_solution_name }}_unmanaged.zip
          solution-type: Unmanaged
    - name: Pack managed solution Kudos
-     uses: microsoft/powerplatform-actions/pack-solution@v0
+     uses: microsoft/powerplatform-actions/pack-solution@v1
      with:
        solution-folder: src/${{ env.kudos_solution_name }}/${{ env.solution_source_folder}}
        solution-file: ${{ env.solution_outbound_folder}}/${{ env.kudos_solution_name }}_managed.zip
@@ -64,7 +67,7 @@ jobs:
         cd ${{ env.solution_release_folder}}
         dir
     - name: Import Employee Experience solution to prod environment
-      uses: microsoft/powerplatform-actions/import-solution@v0
+      uses: microsoft/powerplatform-actions/import-solution@v1
       with:
         environment-url: "https://orgae9e123c.crm.dynamics.com"
         app-id: ${{secrets.PPAPPID}}
@@ -84,7 +87,7 @@ jobs:
         else . end' > temp.json && mv temp.json deploymentSettings.json
   
     - name: Import Kudos solution to prod environment with deployment settings
-      uses: microsoft/powerplatform-actions/import-solution@v0
+      uses: microsoft/powerplatform-actions/import-solution@v1
       with:
         environment-url: "https://orgae9e123c.crm.dynamics.com"
         app-id: ${{secrets.PPAPPID}}
