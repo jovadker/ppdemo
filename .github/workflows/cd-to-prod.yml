@@ -84,11 +84,12 @@ jobs:
         newDataverseId="cc54b39cf98e41e0969dfdd7b90e2e6a"
         newO365Id="4b143239cbbc4443a43466481bc39586"
         newOutlookId="c3a653db1d234550af69f51c22389c5d"
-        cat deploymentSettings.json | jq --arg dataverseId "$newDataverseId" --arg o365Id "$newO365Id" --arg outlookId "$newOutlookId" '.ConnectionReferences[] |= 
+        cat ${{ env.solution_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json | jq --arg dataverseId "$newDataverseId" --arg o365Id "$newO365Id" --arg outlookId "$newOutlookId" '.ConnectionReferences[] |= 
          if .ConnectionId == "[Dataverse]" then .ConnectionId = $dataverseId
          elif .ConnectionId == "[O365]" then .ConnectionId = $o365Id
          elif .ConnectionId == "[Outlook]" then .ConnectionId = $outlookId
         else . end' > temp.json && mv temp.json deploymentSettings.json
+        cat ${{ env.solution_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json
   
     - name: Import Kudos solution to prod environment with deployment settings
       uses: microsoft/powerplatform-actions/import-solution@v1
@@ -98,5 +99,6 @@ jobs:
         client-secret: ${{ secrets.PPAPPSECRET }}
         tenant-id: ${{secrets.PPTENANTID}}
         solution-file: ${{ env.solution_release_folder}}/${{ env.kudos_solution_name }}_managed.zip
-        deployment-settings-file: ${{ env.solution_source_folder}}/deploymentSettings.json
+        use-deployment-settings-file: true
+        deployment-settings-file: ${{ env.solution_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json
         run-asynchronously: true
