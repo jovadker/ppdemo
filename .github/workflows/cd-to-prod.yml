@@ -22,6 +22,7 @@ jobs:
   
   # build and pack employee experience solution (environment variables cannot be passed to the workflow_call event)
   build-and-pack-solution-ee:
+    needs: [ checkout-code ]
     name: Build and Pack Solution for Employee Experience Base
     uses: jovadker/ppdemo/.github/workflows/build-and-pack-solution.yml@main
     with:
