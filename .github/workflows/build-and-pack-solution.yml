@@ -14,19 +14,19 @@ on:
          type: string
          description: "solution outbound folder"
 jobs:
-    installpac:
+    pack-solution:
       runs-on: ubuntu-latest
       steps:
         - name: Pack unmanaged solution Kudos
           uses: microsoft/powerplatform-actions/pack-solution@v0
           with:
-           solution-folder: src/${{ inputs.solution_name }}/${{ inputs.solution_source_folder}}
+           solution-folder: ${{ inputs.solution_source_folder}}
            solution-file: ${{ inputs.solution_outbound_folder}}/${{ inputs.solution_name }}_unmanaged.zip
            solution-type: Unmanaged
         - name: Pack managed solution Kudos
           uses: microsoft/powerplatform-actions/pack-solution@v0
           with:
-           solution-folder: src/${{ inputs.solution_name }}/${{ inputs.solution_source_folder}}
+           solution-folder: ${{ inputs.solution_source_folder}}
            solution-file: ${{ inputs.solution_outbound_folder}}/${{ inputs.solution_name }}_managed.zip
            solution-type: Managed
         - name: Upload the unmanaged solution to GH artifact store 

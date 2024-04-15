@@ -13,15 +13,16 @@ env:
   solution_release_folder: out/release
 
 jobs:
-  build-and-pack-solution:
+  build-and-pack-solution-ee:
     name: Build and Pack Solution for Employee Experience Base
     uses: jovadker/ppdemo/.github/workflows/build-and-pack-solution.yml@main
     with:
       solution_name: mpa_EmployeeExperienceBase
-      solution_source_folder: src/mpa_EmployeeExperienceBase
+      solution_source_folder: src/mpa_EmployeeExperienceBase/src
       solution_outbound_folder: out/solutions
       
   convert-to-managed:
+   needs: [ build-and-pack-solution-ee ]
    runs-on: ubuntu-latest
    steps:
    - uses: actions/checkout@v2
