@@ -10,6 +10,8 @@ env:
   solution_source_folder: src
   solution_outbound_folder: out/solutions
   solution_release_folder: out/release
+  environment_url: "https://orgae9e123c.crm.dynamics.com"
+  enironment_display_name: "DEV-US_XXX_Y"
 
 jobs:
   # build and pack employee experience solution (environment variables cannot be passed to the workflow_call event)
@@ -95,7 +97,7 @@ jobs:
     - name: Import Kudos solution to prod environment with deployment settings
       uses: microsoft/powerplatform-actions/import-solution@v1
       with:
-        environment-url: "https://orgae9e123c.crm.dynamics.com"
+        environment-url: ${{ env.environment_url }}
         app-id: ${{secrets.PPAPPID}}
         client-secret: ${{ secrets.PPAPPSECRET }}
         tenant-id: ${{secrets.PPTENANTID}}
@@ -103,3 +105,22 @@ jobs:
         use-deployment-settings-file: true
         deployment-settings-file: ${{ env.solution_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json
         run-asynchronously: true
+  
+  share-app:
+    needs: [ release-to-prod ]
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        lfs: true
+    - name: Install Power Platform Tools
+      uses: microsoft/powerplatform-actions/actions-install@v1
+    - name: Share the application
+      shell: powershell
+      run: |
+           .github/workflows/share-app.ps1 -ApplicationId ${{secrets.PPAPPID}} `
+           -EnvironmentDisplayName ${{ env.enironment_display_name}} `
+           -ClientSecret ${{secrets.PPAPPSECRET}} `
+           -TenantId ${{secrets.PPTENANTID}} -solutionName "Kudos App" `
+           -GroupID "3936d80b-ee10-465b-9274-ff8048f0389b"
+      
