@@ -88,7 +88,8 @@ jobs:
          if .ConnectionId == "[Dataverse]" then .ConnectionId = $dataverseId
          elif .ConnectionId == "[O365]" then .ConnectionId = $o365Id
          elif .ConnectionId == "[Outlook]" then .ConnectionId = $outlookId
-        else . end' > temp.json && mv temp.json deploymentSettings.json
+        else . end' > temp.json && mv temp.json ${{ env.solution_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json
+        echo "Tokenized deployment settings file:"
         cat ${{ env.solution_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json
   
     - name: Import Kudos solution to prod environment with deployment settings
