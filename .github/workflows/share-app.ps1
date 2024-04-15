@@ -14,8 +14,8 @@ param(
 )
 
 #Modules for Power Apps Powershell Commands
-#Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -Force
-#Install-Module -Name Microsoft.PowerApps.PowerShell -AllowClobber -Force
+Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -Force
+Install-Module -Name Microsoft.PowerApps.PowerShell -AllowClobber -Force
 
 Add-PowerAppsAccount -Endpoint "prod" `
     -TenantID $TenantId `
