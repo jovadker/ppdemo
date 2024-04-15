@@ -19,7 +19,7 @@ jobs:
       steps:
         - name: Install Power Platform Tools
           uses: microsoft/powerplatform-actions/actions-install@v1
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v4
           with:
            lfs: true
         - name: Pack unmanaged solution Kudos
@@ -35,12 +35,12 @@ jobs:
            solution-file: ${{ inputs.solution_outbound_folder}}/${{ inputs.solution_name }}_managed.zip
            solution-type: Managed
         - name: Upload the unmanaged solution to GH artifact store 
-          uses: actions/upload-artifact@v2
+          uses: actions/upload-artifact@v4
           with:
            name: unmanagedSolutions
            path: ${{ inputs.solution_outbound_folder}}/${{ inputs.solution_name }}_unmanaged.zip             
         - name: Upload the managed solution to GH artifact store
-          uses: actions/upload-artifact@v2
+          uses: actions/upload-artifact@v4
           with:
            name: managedSolutions
            path: ${{ inputs.solution_outbound_folder}}/${{ inputs.solution_name }}_managed.zip 
