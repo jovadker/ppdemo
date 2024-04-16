@@ -2,8 +2,8 @@ name: Import to dev
 on:
    workflow_dispatch:
     inputs:
-       dev_branch:
-         description: 'name of the developer branch'
+       dev_environment_name:
+         description: 'name of the developer environment'
          required: true
          default: DEV-US_XXX_Z
 
@@ -56,10 +56,20 @@ jobs:
           shell: bash
           run: |
             # Get the environment URL (the row before the last row contains the information)
-            rawOutput=$(pac admin list --name ${{ github.event.inputs.dev_branch }} | tail -n 2)
+            # Check if we are on the main branch
+            if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+              rawOutput=$(pac admin list --name ${{ github.event.inputs.dev_environment_name }} | tail -n 2)
+            else
+              ref=${{ github.ref }}
+              branch="${ref#refs/heads/}"
+              echo "$branch"
+              # Workflow is executed on the dev branch so we need to get the environment URL from the dev branch
+              rawOutput=$(pac admin list --name $branch | tail -n 2)
+            fi
             environmentURL=$(echo $rawOutput | cut -d ' ' -f 3)
+            echo "Environment URL: $environmentURL"
             # settting the env.devEnvironmentURL
-            echo "devEnvironmentURL=$environmentURL" >> "$GITHUB_ENV"        
+            echo "devEnvironmentURL=$environmentURL" >> "$GITHUB_ENV"
 
         - name: Import Employee Experience solution to dev environment
           uses: microsoft/powerplatform-actions/import-solution@v1
@@ -80,5 +90,17 @@ jobs:
             tenant-id: ${{secrets.PPTENANTID}}
             solution-file: ${{ env.solution_release_folder}}/${{ env.kudos_solution_name }}_unmanaged.zip
             run-asynchronously: true
-        
+
+  upload-data:
+    needs: [ import-to-dev ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Power Platform Tools
+        uses: microsoft/powerplatform-actions/import-data@v1
+        with:
+          environment-url: ${{ env.environment_url }}
+          app-id: ${{secrets.PPAPPID}}
+          client-secret: ${{ secrets.PPAPPSECRET }}
+          tenant-id: ${{secrets.PPTENANTID}}
+          data-file: ./Data/SampleData.Kudos.BadgeData.zip
         
