@@ -1,4 +1,4 @@
-name: Build and pack solution
+name: Build and pack solution (reusable)
 on:
     workflow_call:
       inputs:

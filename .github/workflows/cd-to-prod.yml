@@ -1,5 +1,5 @@
 
-name: CD-to-Prod
+name: Release to Production
 
 on:
   # Allows you to run this workflow manually from the Actions tab
