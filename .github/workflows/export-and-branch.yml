@@ -1,6 +1,6 @@
 name: Export and Branch Solution (DEV)
 on:
-    workflow_dispatch:
+   workflow_dispatch:
       inputs:
         #Change this value
         solution_name:
@@ -20,7 +20,7 @@ on:
          description: 'folder name to be created and checked in *do not change*'
          required: true
          default: solutions/
-  jobs:
+jobs:
     export-from-dev:
       runs-on: windows-latest
       permissions: write-all 
