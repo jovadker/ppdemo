@@ -1,0 +1,84 @@
+name: Import to dev
+on:
+   workflow_dispatch:
+    inputs:
+       dev_branch:
+         description: 'name of the developer branch'
+         required: true
+         default: DEV-US_XXX_Z
+
+env:
+  kudos_solution_name: mpa_Kudos
+  experience_solution_name: mpa_EmployeeExperienceBase
+  solution_outbound_folder: out/solutions
+  solution_release_folder: out/release
+        
+jobs:
+  build-and-pack-solution-ee:
+     name: Build and Pack Solution for Employee Experience Base
+     uses: jovadker/ppdemo/.github/workflows/build-and-pack-solution.yml@main
+     with:
+        solution_name: mpa_EmployeeExperienceBase
+        solution_source_folder: src/mpa_EmployeeExperienceBase/src
+        solution_outbound_folder: out/solutions
+    
+  build-and-pack-solution-kudos:
+    needs: [ build-and-pack-solution-ee ] 
+    name: Build and Pack Solution for Employee Experience Base
+    uses: jovadker/ppdemo/.github/workflows/build-and-pack-solution.yml@main
+    with:
+        solution_name: mpa_Kudos
+        solution_source_folder: src/mpa_Kudos/src
+        solution_outbound_folder: out/solutions
+  
+  import-to-dev:
+      needs: [ build-and-pack-solution-kudos ]
+      runs-on: windows-latest
+      permissions: write-all 
+      steps:
+        - uses: actions/checkout@v2
+          with:
+           token: ${{ secrets.GITHUB_TOKEN }}
+   
+        - name: Install Power Platform Tools
+          uses: microsoft/powerplatform-actions/actions-install@v1
+
+        - name: Install Pac CLI
+          run: |
+           echo "Installing Pac CLI"
+           dotnet tool install --global Microsoft.PowerApps.CLI.Tool
+        - name: Fetch the unmanaged solution from GH artifact store
+          uses: actions/download-artifact@v2
+          with:
+             name: unmanagedSolutions
+             path: ${{ env.solution_release_folder}}
+        - name: "get the environment URL"
+          shell: bash
+          run: |
+            # Get the environment URL (the row before the last row contains the information)
+            rawOutput=$(pac admin list --name ${{ github.event.inputs.dev_branch }} | tail -n 2)
+            environmentURL=$(echo $rawOutput | cut -d ' ' -f 3)
+            # settting the env.devEnvironmentURL
+            echo "devEnvironmentURL=$environmentURL" >> "$GITHUB_ENV"        
+
+        - name: Import Employee Experience solution to dev environment
+          uses: microsoft/powerplatform-actions/import-solution@v1
+          with:
+            environment-url: ${{env.devEnvironmentURL}}
+            app-id: ${{secrets.PPAPPID}}
+            client-secret: ${{ secrets.PPAPPSECRET }}
+            tenant-id: ${{secrets.PPTENANTID}}
+            solution-file: ${{ env.solution_release_folder}}/${{ env.experience_solution_name }}_unmanaged.zip
+            run-asynchronously: true
+
+        - name: Import Kudos solution to prod environment with deployment settings
+          uses: microsoft/powerplatform-actions/import-solution@v1
+          with:
+            environment-url: ${{env.devEnvironmentURL}}
+            app-id: ${{secrets.PPAPPID}}
+            client-secret: ${{ secrets.PPAPPSECRET }}
+            tenant-id: ${{secrets.PPTENANTID}}
+            solution-file: ${{ env.solution_release_folder}}/${{ env.kudos_solution_name }}_unmanaged.zip
+            run-asynchronously: true
+        
+        
