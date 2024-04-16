@@ -99,6 +99,9 @@ jobs:
             tenant-id: ${{secrets.PPTENANTID}}
             solution-file: ${{ env.solution_release_folder}}/${{ env.kudos_solution_name }}_unmanaged.zip
             run-asynchronously: true
+      # using outputs to pass the environment URL to the next job
+      outputs:
+        environment-url: ${{env.devEnvironmentURL}}
 
   upload-data:
     needs: [ import-to-dev ]
@@ -110,7 +113,7 @@ jobs:
       - name: Import data to dev environment (only supported on Windows)
         uses: microsoft/powerplatform-actions/import-data@v1
         with:
-          environment-url: ${{env.devEnvironmentURL}}
+          environment-url: ${{needs.import-to-dev.outputs.environment-url}}
           app-id: ${{secrets.PPAPPID}}
           client-secret: ${{ secrets.PPAPPSECRET }}
           tenant-id: ${{secrets.PPTENANTID}}
