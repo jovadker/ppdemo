@@ -60,7 +60,7 @@ jobs:
           with:
              name: unmanagedSolutions
              path: ${{ env.solution_release_folder}}
-             
+
         - name: "get the environment URL"
           shell: bash
           run: |
@@ -102,9 +102,12 @@ jobs:
 
   upload-data:
     needs: [ import-to-dev ]
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Install Power Platform Tools
+        uses: microsoft/powerplatform-actions/actions-install@v1
+
+      - name: Import data to dev environment (only supported on Windows)
         uses: microsoft/powerplatform-actions/import-data@v1
         with:
           environment-url: ${{ env.environment_url }}
