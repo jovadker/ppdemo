@@ -37,6 +37,6 @@ jobs:
         #creating the branch under "dev" folder
         newbranch=dev/${{ github.event.inputs.dev_branch }}
         git checkout -b $newbranch
-        git -c http.extraheader="AUTHORIZATION: bearer ${{ secrets.GITHUB_TOKEN }}" push origin $newbranch
+        git push origin $newbranch
       
           
