@@ -78,4 +78,7 @@ jobs:
         
         #adding system administrator role to the user who has created the developer environment
         pac admin assign-user --environment $environmentId --user $AADObjectID --role "System Administrator"
+        
+        #adding system administrator role to the service principal as well
+        pac admin assign-user --environment $environmentId --user ${{secrets.PPAPPID}} --role "System Administrator"
         echo "Developer environment created successfully"
