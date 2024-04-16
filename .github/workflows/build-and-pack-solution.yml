@@ -1,3 +1,4 @@
+name: Build and pack solution
 on:
     workflow_call:
       inputs:
