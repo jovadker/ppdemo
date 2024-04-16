@@ -110,7 +110,7 @@ jobs:
       - name: Import data to dev environment (only supported on Windows)
         uses: microsoft/powerplatform-actions/import-data@v1
         with:
-          environment-url: ${{ env.environment_url }}
+          environment-url: ${{env.devEnvironmentURL}}
           app-id: ${{secrets.PPAPPID}}
           client-secret: ${{ secrets.PPAPPSECRET }}
           tenant-id: ${{secrets.PPTENANTID}}
