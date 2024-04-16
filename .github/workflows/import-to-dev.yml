@@ -47,11 +47,20 @@ jobs:
           run: |
            echo "Installing Pac CLI"
            dotnet tool install --global Microsoft.PowerApps.CLI.Tool
+
+        - name: Authenticate with SPN
+          shell: bash
+          run: |
+            pac auth create --applicationId ${{secrets.PPAPPID}} \
+            --clientSecret ${{secrets.PPAPPSECRET}} \
+            --tenant ${{secrets.PPTENANTID}}
+
         - name: Fetch the unmanaged solution from GH artifact store
           uses: actions/download-artifact@v2
           with:
              name: unmanagedSolutions
              path: ${{ env.solution_release_folder}}
+             
         - name: "get the environment URL"
           shell: bash
           run: |
