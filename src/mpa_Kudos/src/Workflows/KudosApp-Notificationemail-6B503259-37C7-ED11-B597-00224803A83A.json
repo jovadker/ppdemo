@@ -6,16 +6,16 @@
           "name": "shared_office365"
         },
         "connection": {
-          "connectionReferenceLogicalName": "mpa_sharedoffice365_6800a"
+          "connectionReferenceLogicalName": "mpa_sharedoffice365_6dabe"
         },
         "runtimeSource": "invoker"
       },
-      "shared_office365users": {
+      "shared_office365users-1": {
         "api": {
           "name": "shared_office365users"
         },
         "connection": {
-          "connectionReferenceLogicalName": "mpa_sharedoffice365users_771f5"
+          "connectionReferenceLogicalName": "mpa_sharedoffice365users_49df8"
         },
         "runtimeSource": "embedded"
       }
@@ -170,7 +170,7 @@
             "host": {
               "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365users",
               "operationId": "UserPhoto_V2",
-              "connectionName": "shared_office365users"
+              "connectionName": "shared_office365users-1"
             }
           },
           "runAfter": {
