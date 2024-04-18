@@ -89,6 +89,11 @@
       <RootComponent type="62" schemaName="mpa_EELocalizationAdminApp" behavior="0" />
       <RootComponent type="9" schemaName="mpa_eelanguage" behavior="0" />
     </RootComponents>
-    <MissingDependencies />
+     <MissingDependencies>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)" />
+        <Dependent type="62" schemaName="mpa_EELocalizationAdminApp" displayName="Employee Experience Localization Admin App" />
+      </MissingDependency>
+    </MissingDependencies>
   </SolutionManifest>
 </ImportExportXml>
