@@ -132,9 +132,12 @@ jobs:
   
   upload-data:
     needs: [ release-to-prod ]
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Install Power Platform Tools
+        uses: microsoft/powerplatform-actions/actions-install@v1
+        
+      - name: Upload data to prod environment
         uses: microsoft/powerplatform-actions/import-data@v1
         with:
           environment-url: ${{ env.environment_url }}
