@@ -134,9 +134,13 @@ jobs:
     needs: [ release-to-prod ]
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+         lfs: true
+         
       - name: Install Power Platform Tools
         uses: microsoft/powerplatform-actions/actions-install@v1
-        
+
       - name: Upload data to prod environment
         uses: microsoft/powerplatform-actions/import-data@v1
         with:
@@ -144,5 +148,5 @@ jobs:
           app-id: ${{secrets.PPAPPID}}
           client-secret: ${{ secrets.PPAPPSECRET }}
           tenant-id: ${{secrets.PPTENANTID}}
-          data-file: ./Data/SampleData.Kudos.BadgeData.zip
+          data-file: .\Data\SampleData.Kudos.BadgeData.zip
           
