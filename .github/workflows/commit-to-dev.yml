@@ -107,6 +107,7 @@ jobs:
         environment-url: ${{env.devEnvironmentURL}}
 
   commit-to-dev-kudos:
+   needs: [ commit-to-dev-ee ]
    runs-on: ubuntu-latest
    permissions: write-all 
    steps:
@@ -121,7 +122,7 @@ jobs:
     - name: export-unmanaged-solution action - Kudos
       uses: microsoft/powerplatform-actions/export-solution@v1
       with:
-         environment-url: ${{env.devEnvironmentURL}}
+         environment-url: ${{needs.commit-to-dev-ee.outputs.environment-url}}
          app-id: ${{secrets.PPAPPID}}
          client-secret: ${{secrets.PPAPPSECRET}}
          tenant-id: ${{secrets.PPTENANTID}}
