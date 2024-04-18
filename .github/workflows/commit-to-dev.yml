@@ -3,7 +3,7 @@ on:
    workflow_dispatch:
     inputs:
        dev_environment_name:
-         description: 'name of the developer environment'
+         description: 'name of the developer environment and branch'
          required: true
          default: DEV-US_XXX_Z
 
@@ -21,7 +21,7 @@ jobs:
         - uses: actions/checkout@v2
           with:
            token: ${{ secrets.GITHUB_TOKEN }}
-           ref: dev/${{ env.dev_environment_name }}
+           ref: dev/${{ github.event.inputs.dev_environment_name }}
    
         - name: Install Power Platform Tools
           uses: microsoft/powerplatform-actions/actions-install@v1
