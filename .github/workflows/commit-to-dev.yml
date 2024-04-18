@@ -96,12 +96,16 @@ jobs:
         
         - name: commit changes to dev branch
           run: |
-            git config --global user.email "github-actions[bot]@users.noreply.github.com"
-            git config --global user.name "github-actions[bot]"
-            git add src
-            git commit -m "committing changes to dev branch" --allow-empty
-            git push origin dev/${{ github.event.inputs.dev_environment_name }}
-      
+            if git diff --exit-code --quiet
+            then
+               echo "No changes to commit"
+            else
+               git config --global user.email "github-actions[bot]@users.noreply.github.com"
+               git config --global user.name "github-actions[bot]"
+               git add src
+               git commit -m "committing changes to dev branch - Employee Exp"
+               git push origin dev/${{ github.event.inputs.dev_environment_name }}
+            fi
       # using outputs to pass the environment URL to the next job
       outputs:
         environment-url: ${{env.devEnvironmentURL}}
@@ -151,9 +155,13 @@ jobs:
     
     - name: commit changes to dev branch
       run: |
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git config --global user.name "github-actions[bot]"
-        git add src
-        git commit -m "committing changes to dev branch" --allow-empty
-        git push origin dev/${{ github.event.inputs.dev_environment_name }}
-        
+        if git diff --exit-code --quiet
+        then
+          echo "No changes to commit"
+        else
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add src
+          git commit -m "committing changes to dev branch - Kudos"
+          git push origin dev/${{ github.event.inputs.dev_environment_name }}
+        fi
