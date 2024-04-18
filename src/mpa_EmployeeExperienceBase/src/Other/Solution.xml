@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.24032.204" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.24033.212" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>mpa_EmployeeExperienceBase</UniqueName>
     <LocalizedNames>
@@ -90,7 +90,7 @@
       <RootComponent type="80" schemaName="mpa_EELocalizationAdminApp" behavior="0" />
       <RootComponent type="9" schemaName="mpa_eelanguage" behavior="0" />
     </RootComponents>
-     <MissingDependencies>
+    <MissingDependencies>
       <MissingDependency>
         <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)" />
         <Dependent type="80" schemaName="mpa_EELocalizationAdminApp" displayName="Employee Experience Localization Admin App" />
