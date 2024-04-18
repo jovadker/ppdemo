@@ -133,7 +133,7 @@ jobs:
     - name: export-managed-solution action - Kudos
       uses: microsoft/powerplatform-actions/export-solution@v1
       with:
-         environment-url: ${{env.devEnvironmentURL}}
+         environment-url: ${{needs.commit-to-dev-ee.outputs.environment-url}}
          app-id: ${{secrets.PPAPPID}}
          client-secret: ${{secrets.PPAPPSECRET}}
          tenant-id: ${{secrets.PPTENANTID}}
