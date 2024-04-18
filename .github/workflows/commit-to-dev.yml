@@ -56,6 +56,14 @@ jobs:
               # settting the env.devEnvironmentURL
               echo "devEnvironmentURL=$environmentURL" >> "$GITHUB_ENV"
    
+        - name: Publish all customizations 
+          uses: microsoft/powerplatform-actions/publish-solution@v1
+          with:
+           environment-url: ${{env.devEnvironmentURL}}
+           app-id: ${{secrets.PPAPPID}}
+           client-secret: ${{secrets.PPAPPSECRET}}
+           tenant-id: ${{secrets.PPTENANTID}}
+        
         - name: export-unmanaged-solution action - Employee Experience
           uses: microsoft/powerplatform-actions/export-solution@v1
           with:
@@ -109,7 +117,7 @@ jobs:
 
     - name: Install Power Platform Tools
       uses: microsoft/powerplatform-actions/actions-install@v1
-    
+ 
     - name: export-unmanaged-solution action - Kudos
       uses: microsoft/powerplatform-actions/export-solution@v1
       with:
@@ -132,7 +140,7 @@ jobs:
          solution-output-file: ${{ env.solution_outbound_folder}}/${{ env.kudos_solution_name }}_managed.zip
          managed: true
     
-    - name: unpack-solution action - Employee Experience
+    - name: unpack-solution action - Kudos
       uses: microsoft/powerplatform-actions/unpack-solution@v1
       with:
          solution-file: ${{ env.solution_outbound_folder}}/${{ env.kudos_solution_name }}.zip
