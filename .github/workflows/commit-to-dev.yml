@@ -14,7 +14,7 @@ env:
   solution_release_folder: out/release
         
 jobs:
-  commit-to-dev:
+  commit-to-dev-ee:
       runs-on: ubuntu-latest
       permissions: write-all 
       steps:
@@ -57,7 +57,7 @@ jobs:
               echo "devEnvironmentURL=$environmentURL" >> "$GITHUB_ENV"
    
         - name: export-unmanaged-solution action - Employee Experience
-          uses: microsoft/powerplatform-actions/export-solution@v0
+          uses: microsoft/powerplatform-actions/export-solution@v1
           with:
              environment-url: ${{env.devEnvironmentURL}}
              app-id: ${{secrets.PPAPPID}}
@@ -68,7 +68,7 @@ jobs:
              managed: false
         
         - name: export-managed-solution action - Employee Experience
-          uses: microsoft/powerplatform-actions/export-solution@v0
+          uses: microsoft/powerplatform-actions/export-solution@v1
           with:
              environment-url: ${{env.devEnvironmentURL}}
              app-id: ${{secrets.PPAPPID}}
@@ -78,8 +78,8 @@ jobs:
              solution-output-file: ${{ env.solution_outbound_folder}}/${{ env.experience_solution_name }}_managed.zip
              managed: true
         
-        - name: unpack-solution action
-          uses: microsoft/powerplatform-actions/unpack-solution@v0
+        - name: unpack-solution action - Employee Experience
+          uses: microsoft/powerplatform-actions/unpack-solution@v1
           with:
              solution-file: ${{ env.solution_outbound_folder}}/${{ env.experience_solution_name }}.zip
              solution-folder: src/${{ env.experience_solution_name }}/src
@@ -98,23 +98,53 @@ jobs:
       outputs:
         environment-url: ${{env.devEnvironmentURL}}
 
-  upload-data:
-    needs: [ commit-to-dev ]
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-         lfs: true
-      
-      - name: Install Power Platform Tools
-        uses: microsoft/powerplatform-actions/actions-install@v1
+  commit-to-dev-kudos:
+   runs-on: ubuntu-latest
+   permissions: write-all 
+   steps:
+    - uses: actions/checkout@v2
+      with:
+       token: ${{ secrets.GITHUB_TOKEN }}
+       ref: dev/${{ github.event.inputs.dev_environment_name }}
 
-      - name: Import data to dev environment (only supported on Windows)
-        uses: microsoft/powerplatform-actions/import-data@v1
-        with:
-          environment-url: ${{needs.import-to-dev.outputs.environment-url}}
-          app-id: ${{secrets.PPAPPID}}
-          client-secret: ${{ secrets.PPAPPSECRET }}
-          tenant-id: ${{secrets.PPTENANTID}}
-          data-file: ./Data/SampleData.Kudos.BadgeData.zip
+    - name: Install Power Platform Tools
+      uses: microsoft/powerplatform-actions/actions-install@v1
+    
+    - name: export-unmanaged-solution action - Kudos
+      uses: microsoft/powerplatform-actions/export-solution@v1
+      with:
+         environment-url: ${{env.devEnvironmentURL}}
+         app-id: ${{secrets.PPAPPID}}
+         client-secret: ${{secrets.PPAPPSECRET}}
+         tenant-id: ${{secrets.PPTENANTID}}
+         solution-name: ${{ env.kudos_solution_name }}
+         solution-output-file: ${{env.solution_outbound_folder}}/${{ env.kudos_solution_name}}.zip
+         managed: false
+    
+    - name: export-managed-solution action - Kudos
+      uses: microsoft/powerplatform-actions/export-solution@v1
+      with:
+         environment-url: ${{env.devEnvironmentURL}}
+         app-id: ${{secrets.PPAPPID}}
+         client-secret: ${{secrets.PPAPPSECRET}}
+         tenant-id: ${{secrets.PPTENANTID}}
+         solution-name: ${{ env.kudos_solution_name }}
+         solution-output-file: ${{ env.solution_outbound_folder}}/${{ env.kudos_solution_name }}_managed.zip
+         managed: true
+    
+    - name: unpack-solution action - Employee Experience
+      uses: microsoft/powerplatform-actions/unpack-solution@v1
+      with:
+         solution-file: ${{ env.solution_outbound_folder}}/${{ env.kudos_solution_name }}.zip
+         solution-folder: src/${{ env.kudos_solution_name }}/src
+         solution-type: 'Both'
+         process-canvas-apps: true
+    
+    - name: commit changes to dev branch
+      run: |
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+        git add src
+        git commit -m "committing changes to dev branch"
+        git push origin dev/${{ github.event.inputs.dev_environment_name }}
         
