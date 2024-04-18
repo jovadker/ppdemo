@@ -92,7 +92,7 @@ jobs:
             git config --global user.name "github-actions[bot]"
             git add src
             git commit -m "committing changes to dev branch"
-            git push origin dev/${{ env.dev_environment_name }}
+            git push origin dev/${{ github.event.inputs.dev_environment_name }}
       
       # using outputs to pass the environment URL to the next job
       outputs:
