@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.24032.192" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.24032.204" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>mpa_Kudos</UniqueName>
     <LocalizedNames>
@@ -109,7 +109,7 @@
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
-        <Required type="1" schemaName="mpa_eelocalization" displayName="Employee Experience Localization" solution="mpa_EmployeeExperienceBase (1.0.0.16)" />
+        <Required type="1" schemaName="mpa_eelocalization" displayName="Employee Experience Localization" solution="Active" />
         <Dependent type="300" schemaName="mpa_KudosApp" displayName="Kudos App" />
       </MissingDependency>
       <MissingDependency>
@@ -117,8 +117,12 @@
         <Dependent type="60" displayName="Information" parentDisplayName="Opt-out User" id="{dba0b562-9a7b-4dbc-aa43-29b2c12b6be8}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.FieldControls.ToggleControl" displayName="MscrmControls.FieldControls.ToggleControl" solution="BaseCustomControlsCore (9.0.2403.2019)" />
+        <Required type="66" schemaName="MscrmControls.FieldControls.ToggleControl" displayName="MscrmControls.FieldControls.ToggleControl" solution="BaseCustomControlsCore (9.0.2403.2020)" />
         <Dependent type="60" displayName="Information" parentDisplayName="Opt-out User" id="{dba0b562-9a7b-4dbc-aa43-29b2c12b6be8}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="ServerMode" solution="SettingDefinitionsData (9.1.24011.240103001)" id.uniquename="ServerMode" />
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=mpa_KudosAdminApp,settingdefinitionid.uniquename=ServerMode" id.parentappmoduleid.uniquename="mpa_KudosAdminApp" id.settingdefinitionid.uniquename="ServerMode" />
       </MissingDependency>
     </MissingDependencies>
   </SolutionManifest>
