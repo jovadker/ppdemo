@@ -71,6 +71,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnDark_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 37,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -329,6 +330,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnHighContrast_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 38,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -587,6 +589,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnLight_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 36,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -795,6 +798,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Color Guide Screen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -916,6 +920,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblAltText_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1192,6 +1197,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblBackground_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1468,6 +1474,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblBackgroundFill_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1744,6 +1751,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblBackgroundFillDisabled_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2020,6 +2028,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblConfirmation_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2296,6 +2305,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblDisabledText_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2572,6 +2582,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblError_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2848,6 +2859,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblIconImg_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 35,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3124,6 +3136,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblInfo_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3400,6 +3413,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblName_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3676,6 +3690,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblPrimary_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3952,6 +3967,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblPrimaryGray_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4228,6 +4244,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSecondary_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4504,6 +4521,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSecondaryGray_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4780,6 +4798,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblTertiary_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 28,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5056,6 +5075,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblTertiaryGray_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 29,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5332,6 +5352,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblText_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 33,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5608,6 +5629,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblWarning_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 34,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5846,6 +5868,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpAltText_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5964,6 +5987,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpBackground_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6082,6 +6106,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpBackgroundFill_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6200,6 +6225,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpBackgroundFillDisabled_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6318,6 +6344,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpConfirmation_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6436,6 +6463,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpDisabledText_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6554,6 +6582,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpError_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6672,6 +6701,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpIconImg_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 32,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6790,6 +6820,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpInfo_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6908,6 +6939,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpName_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7026,6 +7058,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpPrimary_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7144,6 +7177,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpPrimaryGray_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7262,6 +7296,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpSecondary_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7380,6 +7415,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpSecondaryGray_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7498,6 +7534,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpTertiary_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7616,6 +7653,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpTertiaryGray_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 26,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7734,6 +7772,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpText_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 30,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7860,6 +7899,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpWarning_ColorGuide",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 31,
       "PersistMetaDataIDKey": false,
       "Properties": [

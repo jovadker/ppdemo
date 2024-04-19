@@ -299,6 +299,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnError_Error",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -589,6 +590,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conCenterHeaderContent_Error",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -793,6 +795,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conContent_Error",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1017,6 +1020,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conErrorIcon_Error",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1229,6 +1233,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conHeader_Error",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1459,6 +1464,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conLeftHeaderContent_Error",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1665,6 +1671,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conRightHeaderContent_Error",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1810,6 +1817,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Error Screen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2014,6 +2022,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icoError_Error",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2352,6 +2361,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icoHeaderBack_Error",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2731,6 +2741,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icoSettings_Error",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3007,6 +3018,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgCurrentUser_Error",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3274,6 +3286,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgMicrosoftLogo_Error",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3678,6 +3691,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblErrorHeader_Error",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4111,6 +4125,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblErrorMessage_Error",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4402,6 +4417,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpErrorBackground_Error",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [

@@ -215,6 +215,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnKudosGivenView_ViewKudos_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -519,6 +520,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnNext_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -968,6 +970,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnNextPeopleSelect_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1380,6 +1383,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnPromptLink_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2017,7 +2021,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "cmbPeoplePicker_MainPage",
-      "ParentIndex": 3,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2402,6 +2407,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conCenterHeaderContent_BadgeSelection_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2601,6 +2607,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conContent_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2828,6 +2835,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conHeader_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3058,6 +3066,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conLeftHeaderContent_BadgeSelection_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3237,7 +3246,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conManagerView_MainPage",
-      "ParentIndex": 0,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3513,7 +3523,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conPeopleSelect_MainPage",
-      "ParentIndex": 2,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3733,7 +3744,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conPrompt_MainPage",
-      "ParentIndex": 1,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3959,6 +3971,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conRightHeaderContent_BadgeSelection_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4098,6 +4111,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galleryTemplate1_5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4208,7 +4222,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "TabIndex"
+        "TabIndex",
+        "MaxTemplateSize"
       ],
       "GalleryTemplateChildName": "galleryTemplate1_5",
       "HasDynamicProperties": false,
@@ -4221,6 +4236,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galMyKudos_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4352,6 +4368,11 @@
         {
           "Category": "Design",
           "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "MaxTemplateSize",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -4570,6 +4591,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icoHeaderBack_BadgeSelection_5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4954,6 +4976,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icoSettings_BadgeSelection_5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5258,6 +5281,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgBadge_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5529,6 +5553,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgCurrentUser_BadgeSelection_5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5796,6 +5821,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgMicrosoftLogo_BadgeSelection_5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6085,7 +6111,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgPeoplePicker_MainPage",
-      "ParentIndex": 1,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6378,6 +6405,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgPFPGallery_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6713,6 +6741,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblDateGallery_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7100,6 +7129,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblManagerViewTitle_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7473,6 +7503,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblNameGallery_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7803,6 +7834,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblNoData_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -8239,7 +8271,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblOptOutError_MainPage",
-      "ParentIndex": 0,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8674,7 +8707,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblPeopleSelectPromptTitle_MainPage",
-      "ParentIndex": 2,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9062,6 +9096,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblPrompt_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -9506,6 +9541,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblPromptLinkText_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -9901,6 +9937,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblPromptTitle_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -10289,6 +10326,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblTitleGallery_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -10537,6 +10575,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Main Page Screen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -10625,6 +10664,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGallerySeparator1.ID%",
       "Name": "shpSeparator_MainPage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [

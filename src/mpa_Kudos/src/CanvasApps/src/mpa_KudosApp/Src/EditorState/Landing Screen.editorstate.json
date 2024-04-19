@@ -262,6 +262,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnGetStarted_LandingScreen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -545,6 +546,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgCelebration_LandingScreen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -781,6 +783,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgMicrosoftLogo_LandingScreen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -974,6 +977,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Landing Screen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1215,6 +1219,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblTitle_LandingScreen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [

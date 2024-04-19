@@ -275,6 +275,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnFilterHistory_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -728,6 +729,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnKudosGiven_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1135,6 +1137,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnKudosGivenView_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1603,6 +1606,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnKudosReceived_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1884,6 +1888,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnNext_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2408,6 +2413,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "cmbMonthFilter_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3083,6 +3089,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "cmbYearFilter_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3468,6 +3475,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conCenterHeaderContent_BadgeSelection_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3667,6 +3675,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conContent_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3894,6 +3903,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conHeader_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4124,6 +4134,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conLeftHeaderContent_BadgeSelection_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4272,6 +4283,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conMonthFilter_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4489,6 +4501,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conNavigationButtons_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4694,6 +4707,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conPrompt_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4920,6 +4934,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conRightHeaderContent_BadgeSelection_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5167,6 +5182,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conSearchFilter_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5358,6 +5374,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conViewKudos_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5533,6 +5550,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conYearFilter_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5677,6 +5695,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galleryTemplate1_4",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5787,7 +5806,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "TabIndex"
+        "TabIndex",
+        "MaxTemplateSize"
       ],
       "GalleryTemplateChildName": "galleryTemplate1_4",
       "HasDynamicProperties": false,
@@ -5800,6 +5820,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galMyKudos_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5931,6 +5952,11 @@
         {
           "Category": "Design",
           "PropertyName": "LoadingSpinnerColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "MaxTemplateSize",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -6116,6 +6142,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icoClearSearch_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6487,6 +6514,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icoHeaderBack_BadgeSelection_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6773,6 +6801,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icoSearch_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7152,6 +7181,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icoSettings_BadgeSelection_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7456,6 +7486,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgBadge_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7727,6 +7758,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgCurrentUser_BadgeSelection_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7994,6 +8026,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgMicrosoftLogo_BadgeSelection_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -8302,6 +8335,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgPFPGallery_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -8637,6 +8671,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblDateGallery_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -9019,6 +9054,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblMonthFilter_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -9402,6 +9438,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblNameGallery_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -9732,6 +9769,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblNoData_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -10115,6 +10153,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblPrompt_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -10493,6 +10532,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblPromptTitle_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -10795,6 +10835,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSearchBar_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -11178,6 +11219,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblTitleGallery_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -11565,6 +11607,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblYearFilter_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -11854,6 +11897,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpButtonUnderline_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -12006,6 +12050,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "shpContainerSeperator_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -12129,6 +12174,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGallerySeparator1.ID%",
       "Name": "shpSeparator_ViewSubmission",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -12456,6 +12502,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txtSearchBar_ViewKudos",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -12702,6 +12749,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "View Kudos Screen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
