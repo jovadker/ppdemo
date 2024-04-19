@@ -284,7 +284,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnSubmit_Message",
-      "ParentIndex": 10,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -584,6 +585,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conCenterHeaderContent_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -790,6 +792,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conContent_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1017,6 +1020,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conHeader_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1332,6 +1336,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conInputs_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1567,6 +1572,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conLeftHeaderContent_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1774,7 +1780,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conMessageLabels_Message",
-      "ParentIndex": 8,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2013,6 +2020,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conPrompt_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2239,6 +2247,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conRightHeaderContent_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2466,7 +2475,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conSubjectLabels_Message",
-      "ParentIndex": 6,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2815,6 +2825,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icoHeaderBack_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3199,6 +3210,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icoSettings_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3475,6 +3487,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgCurrentUser_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3742,6 +3755,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgMicrosoftLogo_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4042,7 +4056,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgRecipient_Message",
-      "ParentIndex": 1,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4299,7 +4314,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgSelectedBadge_Message",
-      "ParentIndex": 4,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4565,7 +4581,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblBadgeName_Message",
-      "ParentIndex": 3,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4883,7 +4900,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblBadgeSubTitle_Message",
-      "ParentIndex": 5,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5297,6 +5315,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblMessage_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5735,6 +5754,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblMessageCharacterCount_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6128,6 +6148,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblPrompt_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6499,6 +6520,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblPromptTitle_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6881,7 +6903,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblRecipientEmail_Message",
-      "ParentIndex": 2,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7272,7 +7295,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblRecipientName_Message",
-      "ParentIndex": 0,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7696,6 +7720,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSubject_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -8134,6 +8159,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSubjectCharacterCount_Message",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -8382,6 +8408,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Message Screen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -8730,7 +8757,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txtMessage_Message",
-      "ParentIndex": 9,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9245,7 +9273,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txtSubject_Message",
-      "ParentIndex": 7,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

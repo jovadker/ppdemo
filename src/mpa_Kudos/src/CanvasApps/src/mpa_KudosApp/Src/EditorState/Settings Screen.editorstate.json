@@ -98,6 +98,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conCenterHeaderContent_BadgeSelection_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -297,6 +298,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conContent_Settings",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -524,6 +526,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conHeader_Settings",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -754,6 +757,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conLeftHeaderContent_BadgeSelection_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -960,6 +964,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conRightHeaderContent_BadgeSelection_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1217,6 +1222,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conThemeSwitchContainer_SettingsScreen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1368,7 +1374,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "grpContrast_Settings",
-      "ParentIndex": 9,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1419,7 +1426,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "grpDark_Settings",
-      "ParentIndex": 8,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1470,7 +1478,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "grpLight_Settings",
-      "ParentIndex": 7,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1706,6 +1715,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icoHeaderBack_BadgeSelection_4",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2093,6 +2103,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icoSettings_BadgeSelection_4",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2374,6 +2385,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgCurrentUser_BadgeSelection_4",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2641,6 +2653,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgMicrosoftLogo_BadgeSelection_4",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2973,6 +2986,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgSettingsContrast_Settings",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3303,6 +3317,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgSettingsDark_Settings",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3640,6 +3655,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgSettingsLight_Settings",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4018,6 +4034,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblH3ModeTitleContrast_Settings",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4426,6 +4443,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblH3ModeTitleDark_Settings",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4834,6 +4852,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblH3ModeTitleLight_Settings",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5215,6 +5234,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSubtitle_Settings",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5639,6 +5659,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblTitle_Settings",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5879,6 +5900,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Settings Screen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [

@@ -101,27 +101,7 @@
         PaddingTop: =0
         Role: =TextRole.Heading1
         Size: =42
-        Text: |-
-            =// Define a variable named "Text" with the value "{value}"
-            With(
-                {Text: "Employee Kudos"},
-                // Check if a localized text exists for "Text" in the user's preferred language
-                If(
-                    // If the localized text is blank, return the default text
-                    IsBlank(
-                        LookUp(
-                            colUserLocalizedStrings,
-                            'English Value' = Text
-                        ).'Localized Value'
-                    ),
-                    Text,
-                    // If a localized text is found, return that instead of the default text
-                    LookUp(
-                        colUserLocalizedStrings,
-                        'English Value' = Text
-                    ).'Localized Value'
-                )
-            )
+        Text: ="Employee Kudos - April"
         Tooltip: =lblTitle_LandingScreen.Text
         VerticalAlign: =VerticalAlign.Top
         Width: =375

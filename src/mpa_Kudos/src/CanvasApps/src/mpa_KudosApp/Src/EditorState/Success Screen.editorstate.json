@@ -306,6 +306,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnSucess_Success",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -596,6 +597,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conCenterHeaderContent_Success",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -800,7 +802,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conContent_Success",
-      "ParentIndex": 1,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1017,7 +1020,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conHeader_Success",
-      "ParentIndex": 0,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1247,6 +1251,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conLeftHeaderContent_Success",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1453,6 +1458,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conRightHeaderContent_Success",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1672,6 +1678,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conSucessIcon_Success",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2009,6 +2016,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icoHeaderBack_Success",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2398,6 +2406,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icoSettings_Success",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2674,6 +2683,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgCurrentUser_Success",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2941,6 +2951,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgMicrosoftLogo_Success",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3191,6 +3202,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgSuccess_Success",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3575,6 +3587,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSuccessHeader_Success",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4015,6 +4028,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSuccessMessage_Success",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4255,6 +4269,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Success Screen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
