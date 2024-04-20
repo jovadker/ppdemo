@@ -17,6 +17,14 @@ on:
         description: 'Outlook connection id'
         required: true
         default: c3a653db1d234550af69f51c22389c5d
+      groupId:
+        description: 'Microsoft Entra Group Id to share the app with'
+        required: true
+        default: 3936d80b-ee10-465b-9274-ff8048f0389b
+      enironment_display_name:
+        description: 'Environment display name'
+        required: true
+        default: DEV-US_XXX_Y
   # Use GitHub to create a release
   release:
      types: [created] 
@@ -27,9 +35,6 @@ env:
   solution_source_folder: src
   solution_outbound_folder: out/solutions
   solution_release_folder: out/release
-  environment_url: "https://orgae9e123c.crm.dynamics.com"
-  enironment_display_name: "DEV-US_XXX_Y"
-  group_id_to_share_the_app: "3936d80b-ee10-465b-9274-ff8048f0389b"
 
 jobs:
   # build and pack employee experience solution (environment variables cannot be passed to the workflow_call event)
@@ -82,6 +87,25 @@ jobs:
         lfs: true
     - name: Install Power Platform Tools
       uses: microsoft/powerplatform-actions/actions-install@v1
+    - name: Install Pac CLI
+      run: |
+       echo "Installing Pac CLI"
+       dotnet tool install --global Microsoft.PowerApps.CLI.Tool
+    - name: Authenticate with SPN
+      shell: bash
+      run: |
+        pac auth create --applicationId ${{secrets.PPAPPID}} \
+        --clientSecret ${{secrets.PPAPPSECRET}} \
+        --tenant ${{secrets.PPTENANTID}}
+
+    - name: "get the environment URL"
+      shell: bash
+      run: |
+        rawOutput=$(pac admin list --name ${{ github.event.inputs.dev_environment_name }} | tail -n 2)
+        environmentURL=$(echo $rawOutput | cut -d ' ' -f 3)
+        echo "Environment URL: $environmentURL"
+        # settting the env.devEnvironmentURL
+        echo "prodEnvironmentURL=$environmentURL" >> "$GITHUB_ENV"
     - name: Fetch the ready to ship solution from GH artifact store
       uses: actions/download-artifact@v2
       with:
@@ -93,7 +117,7 @@ jobs:
     - name: Import Employee Experience solution to prod environment
       uses: microsoft/powerplatform-actions/import-solution@v1
       with:
-        environment-url: "https://orgae9e123c.crm.dynamics.com"
+        environment-url: "${{ env.prodEnvironmentURL }}"
         app-id: ${{secrets.PPAPPID}}
         client-secret: ${{ secrets.PPAPPSECRET }}
         tenant-id: ${{secrets.PPTENANTID}}
@@ -116,7 +140,7 @@ jobs:
     - name: Import Kudos solution to prod environment with deployment settings
       uses: microsoft/powerplatform-actions/import-solution@v1
       with:
-        environment-url: ${{ env.environment_url }}
+        environment-url: ${{ env.prodEnvironmentURL }}
         app-id: ${{secrets.PPAPPID}}
         client-secret: ${{ secrets.PPAPPSECRET }}
         tenant-id: ${{secrets.PPTENANTID}}
@@ -124,7 +148,10 @@ jobs:
         use-deployment-settings-file: true
         deployment-settings-file: ${{ env.solution_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json
         run-asynchronously: true
-  
+   # using outputs to pass the environment URL to the next job
+    outputs:
+     environment-url: ${{env.prodEnvironmentURL}}
+
   share-app:
     needs: [ release-to-prod ]
     runs-on: windows-latest
@@ -138,10 +165,10 @@ jobs:
       shell: powershell
       run: |
            .github/workflows/share-app.ps1 -ApplicationId ${{secrets.PPAPPID}} `
-           -EnvironmentDisplayName ${{ env.enironment_display_name}} `
+           -EnvironmentDisplayName ${{ github.event.inputs.enironment_display_name }} `
            -ClientSecret ${{secrets.PPAPPSECRET}} `
            -TenantId ${{secrets.PPTENANTID}} -solutionName "Kudos App" `
-           -GroupID ${{ env.group_id_to_share_the_app}}
+           -GroupID ${{ github.event.inputs.groupId }}
   
   upload-data:
     needs: [ release-to-prod ]
@@ -157,7 +184,7 @@ jobs:
       - name: Upload data to prod environment
         uses: microsoft/powerplatform-actions/import-data@v1
         with:
-          environment-url: ${{ env.environment_url }}
+          environment-url: ${{needs.release-to-prod.outputs.environment-url}}
           app-id: ${{secrets.PPAPPID}}
           client-secret: ${{ secrets.PPAPPSECRET }}
           tenant-id: ${{secrets.PPTENANTID}}
