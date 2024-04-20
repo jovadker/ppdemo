@@ -101,7 +101,7 @@ jobs:
     - name: "get the environment URL"
       shell: bash
       run: |
-        rawOutput=$(pac admin list --name ${{ github.event.inputs.dev_environment_name }} | tail -n 2)
+        rawOutput=$(pac admin list --name ${{ github.event.inputs.enironment_display_name }} | tail -n 2)
         environmentURL=$(echo $rawOutput | cut -d ' ' -f 3)
         echo "Environment URL: $environmentURL"
         # settting the env.devEnvironmentURL
