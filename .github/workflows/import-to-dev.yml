@@ -64,10 +64,10 @@ jobs:
           shell: bash
           run: |
             echo "Current branch: ${{github.ref_name}}"
-            echo "Current branch: ${GITHUB_REF#refs/heads/}"
             # Get the environment URL (the row before the last row contains the information)
             ref=${{ github.ref }}
-            branch="${ref#refs/heads/}"
+            echo "Ref: $ref"
+            branch="${ref#refs/heads/dev/}"
             echo "$branch"
             # Workflow is executed on the dev branch so we need to get the environment URL from the dev branch
             rawOutput=$(pac admin list --name $branch | tail -n 2)
