@@ -125,6 +125,7 @@ jobs:
             client-secret: ${{ secrets.PPAPPSECRET }}
             tenant-id: ${{secrets.PPTENANTID}}
             solution-file: ${{ env.solution_release_folder}}/${{ env.kudos_solution_name }}_unmanaged.zip
+            use-deployment-settings-file: true
             deployment-settings-file: ${{ env.solution_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json
             run-asynchronously: true
       # using outputs to pass the environment URL to the next job
