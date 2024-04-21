@@ -1,11 +1,7 @@
 name: Import to dev
 on:
    workflow_dispatch:
-    inputs:
-       dev_environment_name:
-         description: 'name of the developer environment'
-         required: true
-         default: DEV-US_XXX_Z  
+    
 env:
   kudos_solution_name: mpa_Kudos
   experience_solution_name: mpa_EmployeeExperienceBase
@@ -70,16 +66,11 @@ jobs:
             echo "Current branch: ${{github.ref_name}}"
             echo "Current branch: ${GITHUB_REF#refs/heads/}"
             # Get the environment URL (the row before the last row contains the information)
-            # Check if we are on the main branch
-            if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
-              rawOutput=$(pac admin list --name ${{ github.event.inputs.dev_environment_name }} | tail -n 2)
-            else
-              ref=${{ github.ref }}
-              branch="${ref#refs/heads/}"
-              echo "$branch"
-              # Workflow is executed on the dev branch so we need to get the environment URL from the dev branch
-              rawOutput=$(pac admin list --name $branch | tail -n 2)
-            fi
+            ref=${{ github.ref }}
+            branch="${ref#refs/heads/}"
+            echo "$branch"
+            # Workflow is executed on the dev branch so we need to get the environment URL from the dev branch
+            rawOutput=$(pac admin list --name $branch | tail -n 2)
             environmentURL=$(echo $rawOutput | cut -d ' ' -f 3)
             echo "Environment URL: $environmentURL"
             # settting the env.devEnvironmentURL
