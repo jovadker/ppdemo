@@ -49,7 +49,7 @@ jobs:
       runs-on: ubuntu-latest
       # use the GitHub environment created for the developer branch
       environment:
-         name: ${{ github.ref == 'refs/heads/main' && 'dev/${{env.dev_environment_nam}}' || '${{github.ref.name}}' }}
+         name: ${{ github.ref == 'refs/heads/main' && 'dev/${{env.dev_environment_nam}}' || '$GITHUB_REF_NAME' }}
       permissions: write-all 
       steps:
         - uses: actions/checkout@v2
@@ -80,7 +80,7 @@ jobs:
         - name: "get the environment URL"
           shell: bash
           run: |
-            echo "Current branch: ${{ github.ref.name }}"
+            echo "Current branch: $GITHUB_REF_NAME"
             # Get the environment URL (the row before the last row contains the information)
             # Check if we are on the main branch
             if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
@@ -113,9 +113,9 @@ jobs:
             #newDataverseId="${{ github.event.inputs.dataverseConnectionId }}"
             #newO365Id="${{ github.event.inputs.o365IdConnectionId }}"
             #newOutlookId="${{ github.event.inputs.outlookIdConnectionId }}"
-            newDataverseId="${{env.DATAVERSE_CONNECTION_ID }}"
-            #newO365Id="${{ env.O365_CONNECTION_ID}}"
-            #newOutlookId="${{ env.OUTLOOK_CONNECTION_ID }}"
+            newDataverseId="${{vars.DATAVERSE_CONNECTION_ID }}"
+            #newO365Id="${{ vars.O365_CONNECTION_ID}}"
+            #newOutlookId="${{ vars.OUTLOOK_CONNECTION_ID }}"
             cat ${{ env.solutions_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json | jq --arg dataverseId "$newDataverseId" --arg o365Id "$newO365Id" --arg outlookId "$newOutlookId" '.ConnectionReferences[] |= 
              if .ConnectionId == "[Dataverse]" then .ConnectionId = $dataverseId
               elif .ConnectionId == "[O365]" then .ConnectionId = $o365Id
