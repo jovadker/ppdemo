@@ -49,7 +49,7 @@ jobs:
       runs-on: ubuntu-latest
       # use the GitHub environment created for the developer branch
       environment:
-         name: ${{ github.ref == 'refs/heads/main' && 'dev/${{env.dev_environment_name}}' || '$GITHUB_REF_NAME' }}
+         name: ${{ github.ref == 'refs/heads/main' && 'dev/${{inputs.dev_environment_name}}' || '$GITHUB_REF_NAME' }}
       permissions: write-all 
       steps:
         - uses: actions/checkout@v2
@@ -80,7 +80,7 @@ jobs:
         - name: "get the environment URL"
           shell: bash
           run: |
-            echo "Current branch: $GITHUB_REF_NAME"
+            echo "Current branch: ${GITHUB_REF#refs/heads/}"
             # Get the environment URL (the row before the last row contains the information)
             # Check if we are on the main branch
             if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
