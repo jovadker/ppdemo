@@ -49,7 +49,7 @@ jobs:
       runs-on: ubuntu-latest
       # use the GitHub environment created for the developer branch
       environment:
-         name: ${{ github.ref == 'refs/heads/main' && 'dev/${{env.dev_environment_nam}}' || '$GITHUB_REF_NAME' }}
+         name: ${{ github.ref == 'refs/heads/main' && 'dev/${{env.dev_environment_name}}' || '$GITHUB_REF_NAME' }}
       permissions: write-all 
       steps:
         - uses: actions/checkout@v2
