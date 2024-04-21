@@ -105,16 +105,16 @@ jobs:
 
         - name: Adjust deployment settings for Kudos solution
           run: |
-              newDataverseId="${{ github.event.inputs.dataverseConnectionId }}"
-              newO365Id="${{ github.event.inputs.o365IdConnectionId }}"
-              newOutlookId="${{ github.event.inputs.outlookIdConnectionId }}"
-              cat ${{ env.solutions_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json | jq --arg dataverseId "$newDataverseId" --arg o365Id "$newO365Id" --arg outlookId "$newOutlookId" '.ConnectionReferences[] |= 
-               if .ConnectionId == "[Dataverse]" then .ConnectionId = $dataverseId
-               elif .ConnectionId == "[O365]" then .ConnectionId = $o365Id
-               elif .ConnectionId == "[Outlook]" then .ConnectionId = $outlookId
-              else . end' > temp.json && mv temp.json ${{ env.solutions_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json
-              echo "Tokenized deployment settings file:"
-              cat ${{ env.solutions_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json
+            dataverseId="${{ github.event.inputs.dataverseConnectionId }}"
+            o365Id="${{ github.event.inputs.o365IdConnectionId }}"
+            outlookId="${{ github.event.inputs.outlookIdConnectionId }}"
+            cat ${{ env.solutions_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json | jq --arg dataverseId "$newDataverseId" --arg o365Id "$newO365Id" --arg outlookId "$newOutlookId" '.ConnectionReferences[] |= 
+             if .ConnectionId == "[Dataverse]" then .ConnectionId = $dataverseId
+              elif .ConnectionId == "[O365]" then .ConnectionId = $o365Id
+              elif .ConnectionId == "[Outlook]" then .ConnectionId = $outlookId
+             else . end' > temp.json && mv temp.json ${{ env.solutions_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json
+             echo "Tokenized deployment settings file:"
+             cat ${{ env.solutions_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json
         
         - name: Import Kudos solution to dev environment with deployment settings
           uses: microsoft/powerplatform-actions/import-solution@v1
