@@ -32,7 +32,7 @@ jobs:
       runs-on: ubuntu-latest
       # use the GitHub environment created for the developer branch
       environment:
-         name: 'dev/${{ github.ref_name }}'
+         name: '${{ github.ref_name }}'
       permissions: write-all 
       steps:
         - uses: actions/checkout@v2
