@@ -46,7 +46,7 @@ jobs:
   
   import-to-dev:
       needs: [ build-and-pack-solution-kudos ]
-      runs-on: windows-latest
+      runs-on: ubuntu-latest
       permissions: write-all 
       steps:
         - uses: actions/checkout@v2
