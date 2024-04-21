@@ -105,9 +105,9 @@ jobs:
 
         - name: Adjust deployment settings for Kudos solution
           run: |
-            dataverseId="${{ github.event.inputs.dataverseConnectionId }}"
-            o365Id="${{ github.event.inputs.o365IdConnectionId }}"
-            outlookId="${{ github.event.inputs.outlookIdConnectionId }}"
+            newDataverseId="${{ github.event.inputs.dataverseConnectionId }}"
+            newO365Id="${{ github.event.inputs.o365IdConnectionId }}"
+            newOutlookId="${{ github.event.inputs.outlookIdConnectionId }}"
             cat ${{ env.solutions_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json | jq --arg dataverseId "$newDataverseId" --arg o365Id "$newO365Id" --arg outlookId "$newOutlookId" '.ConnectionReferences[] |= 
              if .ConnectionId == "[Dataverse]" then .ConnectionId = $dataverseId
               elif .ConnectionId == "[O365]" then .ConnectionId = $o365Id
