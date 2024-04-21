@@ -6,19 +6,6 @@ on:
          description: 'name of the developer environment'
          required: true
          default: DEV-US_XXX_Z  
-       dataverseConnectionId:
-         description: 'Dataverse connection id'
-         required: true
-         default: b4150024ee784f2390bd89cfab7cdaba
-       o365IdConnectionId:
-         description: 'O365 connection id'
-         required: true
-         default: 8248890bcb2047b2a56ecdea1321c6d2
-       outlookIdConnectionId:
-         description: 'Outlook connection id'
-         required: true
-         default: bca1b756be5e4744a7c343c667d15e31
-
 env:
   kudos_solution_name: mpa_Kudos
   experience_solution_name: mpa_EmployeeExperienceBase
@@ -110,12 +97,9 @@ jobs:
         - name: Adjust deployment settings for Kudos solution
           shell: bash
           run: |
-            #newDataverseId="${{ github.event.inputs.dataverseConnectionId }}"
-            #newO365Id="${{ github.event.inputs.o365IdConnectionId }}"
-            #newOutlookId="${{ github.event.inputs.outlookIdConnectionId }}"
             newDataverseId="${{vars.DATAVERSE_CONNECTION_ID }}"
-            #newO365Id="${{ vars.O365_CONNECTION_ID}}"
-            #newOutlookId="${{ vars.OUTLOOK_CONNECTION_ID }}"
+            newO365Id="${{ vars.O365_CONNECTION_ID}}"
+            newOutlookId="${{ vars.OUTLOOK_CONNECTION_ID }}"
             cat ${{ env.solutions_source_folder}}/${{ env.kudos_solution_name }}/deploymentSettings.json | jq --arg dataverseId "$newDataverseId" --arg o365Id "$newO365Id" --arg outlookId "$newOutlookId" '.ConnectionReferences[] |= 
              if .ConnectionId == "[Dataverse]" then .ConnectionId = $dataverseId
               elif .ConnectionId == "[O365]" then .ConnectionId = $o365Id
