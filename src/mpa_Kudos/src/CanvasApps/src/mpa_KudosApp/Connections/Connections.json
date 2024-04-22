@@ -56,7 +56,7 @@
           "value": "6b503259-37c7-ed11-b597-00224803a83a"
         },
         "workflowName": {
-          "value": "d827569a-2849-4c75-be53-6b20fc9cc7c7"
+          "value": "6aaa5593-90c8-45c8-bd45-8b1542431e90"
         }
       },
       "parameterHintsV2": {
@@ -70,7 +70,7 @@
           "value": "6b503259-37c7-ed11-b597-00224803a83a"
         },
         "workflowName": {
-          "value": "d827569a-2849-4c75-be53-6b20fc9cc7c7"
+          "value": "6aaa5593-90c8-45c8-bd45-8b1542431e90"
         }
       }
     },
@@ -102,7 +102,7 @@
           "value": "9985ea58-32c4-ed11-83ff-00224803a83a"
         },
         "workflowName": {
-          "value": "1ae83481-51cb-44ea-b618-fecd757a6842"
+          "value": "85429999-8f67-4827-b6dc-76a7254e75ee"
         }
       },
       "parameterHintsV2": {
@@ -113,7 +113,7 @@
           "value": "9985ea58-32c4-ed11-83ff-00224803a83a"
         },
         "workflowName": {
-          "value": "1ae83481-51cb-44ea-b618-fecd757a6842"
+          "value": "85429999-8f67-4827-b6dc-76a7254e75ee"
         }
       }
     },
@@ -132,8 +132,8 @@
       "UserPhotoMetadata",
       "UserPhoto_V2",
       "UserProfile",
-      "DirectReports",
       "SearchUser",
+      "DirectReports",
       "Manager_V2"
     ],
     "connectionRef": {

@@ -101,7 +101,7 @@
         PaddingTop: =0
         Role: =TextRole.Heading1
         Size: =42
-        Text: ="Employee Kudos - April"
+        Text: ="Employee Kudos - April, 22"
         Tooltip: =lblTitle_LandingScreen.Text
         VerticalAlign: =VerticalAlign.Top
         Width: =375
