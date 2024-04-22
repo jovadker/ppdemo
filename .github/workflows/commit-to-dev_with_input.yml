@@ -1,4 +1,4 @@
-name: Commit to dev branch
+name: Commit to dev branch with input
 on:
    workflow_dispatch:
     inputs:
