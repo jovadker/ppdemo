@@ -46,14 +46,6 @@ jobs:
              echo "Environment URL: $environmentURL"
              # setting the env.devEnvironmentURL
              echo "devEnvironmentURL=$environmentURL" >> "$GITHUB_ENV"
-   
-        - name: Publish all customizations 
-          uses: microsoft/powerplatform-actions/publish-solution@v1
-          with:
-           environment-url: ${{env.devEnvironmentURL}}
-           app-id: ${{secrets.PPAPPID}}
-           client-secret: ${{secrets.PPAPPSECRET}}
-           tenant-id: ${{secrets.PPTENANTID}}
         
         - name: export-unmanaged-solution action - Employee Experience
           uses: microsoft/powerplatform-actions/export-solution@v1
