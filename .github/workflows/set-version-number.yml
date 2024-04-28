@@ -23,8 +23,9 @@ jobs:
             solution_dir="${{ inputs.source_folder }}"
             # Find all Solution.xml files in the solution directory and its subdirectories
             find "$solution_dir" -type f -name "Solution.xml" | while read -r file; do
-            # Replace the content of the <Version> tag with version number provided in the input
-            sed -i 's|<Version>.*</Version>|<Version>${{ inputs.version_number }}</Version>|g' "$file"
+               # Replace the content of the <Version> tag with version number provided in the input
+               sed -i 's|<Version>.*</Version>|<Version>${{ inputs.version_number }}</Version>|g' "$file"
+            done
         - name: commit changes to branch
           run: |
             if git diff --exit-code --quiet
