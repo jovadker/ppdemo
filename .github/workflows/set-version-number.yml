@@ -20,7 +20,7 @@ jobs:
           with:
            lfs: true
         - run: |
-            set -e
+            dir
             # Find all Solution.xml files in the solution directory and its subdirectories
             find ${{ inputs.source_folder }} -type f -name "Solution.xml" | while read -r file; do
                # Replace the content of the <Version> tag with version number provided in the input
