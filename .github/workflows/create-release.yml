@@ -1,0 +1,13 @@
+name: GitHub Release
+on:
+  release:
+      types: [created] 
+
+jobs:
+  release:
+   runs-on: ubuntu-latest
+   steps:
+   - name: Set version number
+     run: echo "VERSION=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
+   - name: Build with version
+     run: echo "Version number is" $VERSION
