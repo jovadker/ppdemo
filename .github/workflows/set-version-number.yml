@@ -11,7 +11,7 @@ on:
          type: string
          description: "0.0.0.0"
 jobs:
-    pack-solution:
+    set-version:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
@@ -25,7 +25,7 @@ jobs:
             find "$solution_dir" -type f -name "Solution.xml" | while read -r file; do
             # Replace the content of the <Version> tag with version number provided in the input
             sed -i 's|<Version>.*</Version>|<Version>${{ inputs.version_number }}</Version>|g' "$file"
-        - name: commit changes to dev branch
+        - name: commit changes to branch
           run: |
             if git diff --exit-code --quiet
             then
