@@ -30,14 +30,14 @@ jobs:
             done
         - name: commit changes to branch
           run: |
+            git pull
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git config --global user.name "github-actions[bot]"
+            git add src
             if git diff --exit-code --quiet
             then
               echo "No changes to commit"
             else
-              git pull
-              git config --global user.email "github-actions[bot]@users.noreply.github.com"
-              git config --global user.name "github-actions[bot]"
-              git add src
               git commit -m "committing version changes to branch"
               git push origin
             fi
