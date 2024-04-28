@@ -40,7 +40,6 @@ jobs:
               ref=${{ github.ref }}
               echo "Ref: $ref"
               branch="${ref#refs/heads/dev/}"
-              echo "$branch"
-              git pull
+              echo "$branch"              
               git push origin dev/$branch
             fi
