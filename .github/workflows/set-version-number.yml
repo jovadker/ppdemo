@@ -41,6 +41,3 @@ jobs:
               git commit -m "committing version changes to branch"
               git push origin
             fi
-    
-            done
-    
