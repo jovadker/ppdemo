@@ -21,7 +21,6 @@ jobs:
            lfs: true
         - shell: bash
           run: |
-            dir
             # Find all Solution.xml files in the solution directory and its subdirectories
             find ${{ inputs.source_folder }} -type f -name "Solution.xml" | while read -r file; do
                # Replace the content of the <Version> tag with version number provided in the input
@@ -35,6 +34,7 @@ jobs:
             then
               echo "No changes to commit"
             else
+              git add ${{ inputs.source_folder }}
               git commit -m "committing version changes to branch"
               git push origin
             fi
