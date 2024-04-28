@@ -17,8 +17,6 @@ jobs:
        contents: write
       steps:
         - uses: actions/checkout@v4
-          with:
-           lfs: true
         - shell: bash
           run: |
             # Find all Solution.xml files in the solution directory and its subdirectories
@@ -34,12 +32,10 @@ jobs:
             then
               echo "No changes to commit"
             else
+              echo "Current branch: ${{github.ref_name}}"
+              git fetch
+              git pull origin ${{github.ref_name}}
               git add ${{ inputs.source_folder }}
               git commit -m "committing version changes to branch"
-              echo "Current branch: ${{github.ref_name}}"
-              ref=${{ github.ref }}
-              echo "Ref: $ref"
-              branch="${ref#refs/heads/dev/}"
-              echo "$branch"              
-              git push origin dev/$branch
+              git push origin ${{github.ref_name}}
             fi
