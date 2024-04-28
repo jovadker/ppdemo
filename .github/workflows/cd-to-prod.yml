@@ -25,10 +25,6 @@ on:
         description: 'Environment display name'
         required: true
         default: DEV-US_XXX_Y
-  # Use GitHub to create a release
-  release:
-     types: [created] 
-
 env:
   kudos_solution_name: mpa_Kudos
   experience_solution_name: mpa_EmployeeExperienceBase
