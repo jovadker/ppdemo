@@ -151,6 +151,8 @@ jobs:
   
   set-version-number:
     needs: [ commit-to-dev-kudos ]
+    permissions: 
+      contents: write
     name: Set the version numbers to 0.0.0.0
     uses: jovadker/ppdemo/.github/workflows/set-version-number.yml@main
     with:    
