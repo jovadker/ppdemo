@@ -120,10 +120,6 @@
         <Required type="66" schemaName="MscrmControls.FieldControls.ToggleControl" displayName="MscrmControls.FieldControls.ToggleControl" solution="BaseCustomControlsCore (9.0.2403.3026)" />
         <Dependent type="60" displayName="Information" parentDisplayName="Opt-out User" id="{dba0b562-9a7b-4dbc-aa43-29b2c12b6be8}" />
       </MissingDependency>
-      <MissingDependency>
-        <Required type="SettingDefinition" displayName="ServerMode" solution="SettingDefinitionsData (9.1.24011.240103001)" id.uniquename="ServerMode" />
-        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=mpa_KudosAdminApp,settingdefinitionid.uniquename=ServerMode" id.parentappmoduleid.uniquename="mpa_KudosAdminApp" id.settingdefinitionid.uniquename="ServerMode" />
-      </MissingDependency>
     </MissingDependencies>
   </SolutionManifest>
 </ImportExportXml>
