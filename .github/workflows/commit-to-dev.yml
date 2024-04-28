@@ -148,3 +148,11 @@ jobs:
           git commit -m "committing changes to dev branch - Kudos"
           git push origin
         fi
+  
+  set-version-number:
+    needs: [ commit-to-dev-kudos ]
+    name: Build and Pack Solution for Employee Experience Base
+    uses: jovadker/ppdemo/.github/workflows/set-version-number.yml@main
+    with:    
+        source_folder: src/
+        version_number: "0.0.0.0"
