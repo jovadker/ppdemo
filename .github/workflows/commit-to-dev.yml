@@ -151,7 +151,7 @@ jobs:
   
   set-version-number:
     needs: [ commit-to-dev-kudos ]
-    name: Build and Pack Solution for Employee Experience Base
+    name: Set the version numbers to 0.0.0.0
     uses: jovadker/ppdemo/.github/workflows/set-version-number.yml@main
     with:    
         source_folder: src/
