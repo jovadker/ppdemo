@@ -36,5 +36,6 @@ jobs:
             else
               git add ${{ inputs.source_folder }}
               git commit -m "committing version changes to branch"
+              git pull
               git push origin
             fi
