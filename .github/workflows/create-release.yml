@@ -40,13 +40,12 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: build-artifacts-Kudos
-        path: .\src\mpa_Kudos\bin\Release\
-        type: zip
+        path: .\src\mpa_Kudos\bin\Release\*_managed.zip
     - name: Upload build artifacts - Employee Experience
       uses: actions/upload-artifact@v2
       with:
         name: build-artifacts-EE
-        path: .\src\mpa_EmployeeExperienceBase\bin\Release\
+        path: .\src\mpa_EmployeeExperienceBase\bin\Release\*_managed.zip
         type: zip
     - name: Build with MSBuild
       run: |
@@ -58,7 +57,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: build-artifacts-DeploymentPackage
-        path: .\src\DeploymentPackage\bin\Release\
+        path: .\src\DeploymentPackage\bin\Release\*.zip
         type: zip
     
   release:
