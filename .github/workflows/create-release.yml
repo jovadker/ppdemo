@@ -22,12 +22,14 @@ jobs:
     - uses: actions/checkout@v4
     - name: Set version number
       uses: ./.github/actions/set-version-number-action
+      id: set-version
       with:
-        who-to-greet: 'Mona the Octocat'
-    - run: echo random-number "$RANDOM_NUMBER"
+        source_folder: src
+        version_number: ${{ inputs.release_version }}
+    - run: echo files changed "$CHANGE"
       shell: bash
       env:
-         RANDOM_NUMBER: ${{ steps.foo.outputs.random-number }}
+         CHANGE: ${{ steps.set-version.outputs.random-number }}
 
     
   release:
@@ -42,8 +44,9 @@ jobs:
     - name: Create a release
       shell: bash
       run: | 
-       gh release create ${{inputs.release_version}} -t ${{inputs.release_version}} -n ${{inputs.release_notes}} \
-         --generate-notes 
+       #gh release create ${{inputs.release_version}} -t ${{inputs.release_version}} -n ${{inputs.release_notes}} \
+       #  --generate-notes 
+       gh release create ${{inputs.release_version}} --generate-notes
        echo "Release created successfully"
 
   
