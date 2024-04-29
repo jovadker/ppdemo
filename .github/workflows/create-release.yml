@@ -20,6 +20,7 @@ jobs:
    runs-on: windows-latest
    steps:
     - uses: actions/checkout@v4
+    # composite action to set the version number
     - name: Set version number
       uses: ./.github/actions/set-version-number-action
       id: set-version
@@ -30,6 +31,8 @@ jobs:
       shell: bash
       env:
          CHANGE: ${{ steps.set-version.outputs.files-changed }}
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v2
     - name: Build with MSBuild
       run: msbuild .\src\solutions.proj /p:Configuration=Release
       shell: cmd
