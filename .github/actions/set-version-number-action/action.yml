@@ -25,9 +25,7 @@ runs:
         # Replace the content of the <Version> tag with version number provided in the input
              sed -i 's|<Version>.*</Version>|<Version>${{ inputs.version_number }}</Version>|g' "$file"
              # If sed command was successful, increment the counter
-             if [ $? -eq 0 ]; then
-              ((count++))
-             fi
+             ((count++))
         done
         # Print the number of files changed
         echo "Number of files changed: $count"
