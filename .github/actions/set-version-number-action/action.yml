@@ -21,6 +21,11 @@ runs:
       run: |
        echo "hello"
        echo "dsfsdf"
+       # Find all Solution.xml files in the solution directory and its subdirectories
+       find ${{ inputs.source_folder }} -type f -name "Solution.xml" | while read -r file; do
+          # Replace the content of the <Version> tag with version number provided in the input
+          sed -i 's|<Version>.*</Version>|<Version>${{ inputs.version_number }}</Version>|g' "$file"
+        done
    
     - name: Set GitHub Path
       run: echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
