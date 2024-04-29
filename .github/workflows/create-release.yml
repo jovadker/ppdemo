@@ -14,7 +14,9 @@ on:
         description: 'Release title'
         required: true
         default: 'Initial release'
-       
+env:
+ solution_release_folder: out/release       
+
 jobs:
   set-version-and-build:
    runs-on: windows-latest
@@ -46,19 +48,17 @@ jobs:
       with:
         name: build-artifacts-EE
         path: .\src\mpa_EmployeeExperienceBase\bin\Release\*_managed.zip
-        type: zip
     - name: Build with MSBuild
       run: |
         cd src
         cd DeploymentPackage
-        dotnet publish -c Release
+        dotnet publish -c Release /p:Version=${{inputs.release_version}}
       shell: cmd
     - name: Upload build artifacts - Deployment Package
       uses: actions/upload-artifact@v2
       with:
         name: build-artifacts-DeploymentPackage
         path: .\src\DeploymentPackage\bin\Release\*.zip
-        type: zip
     
   release:
    needs: [ set-version-and-build ]
@@ -69,6 +69,11 @@ jobs:
     - uses: actions/checkout@v4
       with:
         lfs: true
+    - name: Fetch the ready to ship solution from GH artifact store
+      uses: actions/download-artifact@v2
+      with:
+        name: build-artifacts-DeploymentPackage
+        path: ${{ env.solution_release_folder}}
     - name: Authenticate gh cli
       run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
     - name: Create a release
@@ -76,7 +81,7 @@ jobs:
       run: | 
        #gh release create ${{inputs.release_version}} -t ${{inputs.release_version}} -n ${{inputs.release_notes}} \
        #  --generate-notes 
-       gh release create ${{inputs.release_version}} --generate-notes
+       gh release create ${{inputs.release_version}} --generate-notes ${{ env.solution_release_folder}}
        echo "Release created successfully"
 
   
