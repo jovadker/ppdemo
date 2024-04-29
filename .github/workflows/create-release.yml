@@ -16,8 +16,8 @@ on:
         default: 'Initial release'
        
 jobs:
-  set-version:
-   runs-on: ubuntu-latest
+  set-version-and-build:
+   runs-on: windows-latest
    steps:
     - uses: actions/checkout@v4
     - name: Set version number
@@ -30,10 +30,36 @@ jobs:
       shell: bash
       env:
          CHANGE: ${{ steps.set-version.outputs.files-changed }}
-
+    - name: Build with MSBuild
+      run: msbuild .\src\solutions.proj /p:Configuration=Release
+      shell: cmd
+    - name: Upload build artifacts - Kudos
+      uses: actions/upload-artifact@v2
+      with:
+        name: build-artifacts-Kudos
+        path: .\src\mpa_Kudos\bin\Release\
+        type: zip
+    - name: Upload build artifacts - Employee Experience
+      uses: actions/upload-artifact@v2
+      with:
+        name: build-artifacts-EE
+        path: .\src\mpa_EmployeeExperienceBase\bin\Release\
+        type: zip
+    - name: Build with MSBuild
+      run: |
+        cd src
+        cd DeploymentPackage
+        dotnet publish -c Release
+      shell: cmd
+    - name: Upload build artifacts - Deployment Package
+      uses: actions/upload-artifact@v2
+      with:
+        name: build-artifacts-DeploymentPackage
+        path: .\src\DeploymentPackage\bin\Release\
+        type: zip
     
   release:
-   needs: [ set-version ]
+   needs: [ set-version-and-build ]
    runs-on: ubuntu-latest
    permissions:
     contents: write
