@@ -21,13 +21,17 @@ jobs:
    steps:
     - uses: actions/checkout@v4
     - name: Set version number
-      uses: ./.github/workflows/set-version-number
+      uses: ./.github/workflows/set-version-number-number@main
       with:
-        source_folder: src
-        version_number: ${{inputs.release_version}}
+        who-to-greet: 'Mona the Octocat'
+    - run: echo random-number "$RANDOM_NUMBER"
+      shell: bash
+      env:
+         RANDOM_NUMBER: ${{ steps.foo.outputs.random-number }}
 
     
   release:
+   needs: [ set-version ]
    runs-on: ubuntu-latest
    steps:
     - uses: actions/checkout@v4
