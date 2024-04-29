@@ -1,13 +1,45 @@
 name: GitHub Release
 on:
-  release:
-      types: [created] 
-
+  workflow_dispatch: 
+    inputs:
+      release_version:
+        description: 'Release version'
+        required: true
+        default: v1.0.0
+      release_notes:
+        description: 'Release notes'
+        required: true
+        default: 'Initial release'
+      release_title:
+        description: 'Release title'
+        required: true
+        default: 'Initial release'
+       
 jobs:
+  set-version:
+   runs-on: ubuntu-latest
+   steps:
+    - uses: actions/checkout@v4
+    - name: Set version number
+      uses: ./.github/workflows/set-version-number
+      with:
+        source_folder: src
+        version_number: ${{inputs.release_version}}
+
+    
   release:
    runs-on: ubuntu-latest
    steps:
-   - name: Set version number
-     run: echo "VERSION=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
-   - name: Build with version
-     run: echo "Version number is" $VERSION
+    - uses: actions/checkout@v4
+      with:
+        lfs: true
+    - name: Authenticate gh cli
+      run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+    - name: Create a release
+      shell: bash
+      run: | 
+       gh release create ${{inputs.release_version}} -t ${{inputs.release_version}} -n ${{inputs.release_notes}} \
+         --generate-notes 
+       echo "Release created successfully"
+
+  
