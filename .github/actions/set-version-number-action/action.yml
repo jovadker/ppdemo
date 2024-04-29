@@ -19,19 +19,8 @@ runs:
     - shell: bash
       id: set-version
       run: |
-        #declare -i count=0
-        # Find all Solution.xml files in the solution directory and its subdirectories
-        while read -r file; do
-             # Replace the content of the <Version> tag with version number provided in the input
-             sed -i 's|<Version>.*</Version>|<Version>${{ inputs.version_number }}</Version>|g' "$file"
-             # If sed command was successful, increment the counter
-             ((count++))
-             #echo $count
-        done <<<$(find ${{ inputs.source_folder }} -type f -name "Solution.xml")
-        # Print the number of files changed
-        #echo "Number of files changed: $count"
-        #echo "files-changed=$(echo $count)" >> $GITHUB_OUTPUT
-        #echo "files-changed=2" >> $GITHUB_OUTPUT
+       echo "hello"
+       echo "dsfsdf"
    
     - name: Set GitHub Path
       run: echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
