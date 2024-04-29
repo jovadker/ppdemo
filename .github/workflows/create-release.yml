@@ -21,7 +21,7 @@ jobs:
    steps:
     - uses: actions/checkout@v4
     - name: Set version number
-      uses: ./.github/actions/set-version-number-action@main
+      uses: .github/actions/set-version-number-action
       with:
         who-to-greet: 'Mona the Octocat'
     - run: echo random-number "$RANDOM_NUMBER"
