@@ -29,8 +29,9 @@ runs:
              echo $count
         done <<<$(find ${{ inputs.source_folder }} -type f -name "Solution.xml")
         # Print the number of files changed
-        echo "Number of files changed: $count"
-        echo "files-changed=$(echo $count)" >> $GITHUB_OUTPUT
+        #echo "Number of files changed: $count"
+        #echo "files-changed=$(echo $count)" >> $GITHUB_OUTPUT
+        echo "files-changed=2" >> $GITHUB_OUTPUT
    
     - name: Set GitHub Path
       run: echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
