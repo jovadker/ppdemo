@@ -79,9 +79,7 @@ jobs:
     - name: Create a release
       shell: bash
       run: | 
-       #gh release create ${{inputs.release_version}} -t ${{inputs.release_version}} -n ${{inputs.release_notes}} \
-       #  --generate-notes 
-       gh release create ${{inputs.release_version}} --generate-notes ${{ env.solution_release_folder}}
+       gh release create ${{inputs.release_version}} --generate-notes ${{ env.solution_release_folder}}/*.*
        echo "Release created successfully"
 
   
