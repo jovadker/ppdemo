@@ -8,6 +8,7 @@ project.lock.json
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
+TestOutput/
 x64/
 x86/
 build/
