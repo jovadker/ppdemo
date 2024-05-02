@@ -30,11 +30,11 @@ testSettings:
   browserConfigurations:
   - browser: Chromium
     device: 
-    screenWidth: 0
-    screenHeight: 0
+    screenWidth: 1024
+    screenHeight: 768
   locale: en-US
   recordVideo: true
-  headless: false
+  headless: true
   enablePowerFxOverlay: false
   timeout: 30000
 environmentVariables:

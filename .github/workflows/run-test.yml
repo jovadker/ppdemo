@@ -30,6 +30,9 @@ jobs:
           export user1Password="${{secrets.TESTUSERPSW}}"
           pac test run --test-plan-file ./test/SmokeTestSuite.yaml -env 4d3c1075-e53d-ee35-ad75-40c6f5edd705 \
               --tenant ${{secrets.PPTENANTID}}
-        
-
       
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: ./testoutput
