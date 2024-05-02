@@ -34,7 +34,7 @@ testSettings:
     screenHeight: 0
   locale: en-US
   recordVideo: true
-  headless: false
+  headless: true
   enablePowerFxOverlay: false
   timeout: 30000
 environmentVariables:
