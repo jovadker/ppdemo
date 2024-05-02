@@ -9,6 +9,26 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+         token: ${{ secrets.GITHUB_TOKEN }}
+   
+      - name: Install Power Platform Tools
+        uses: microsoft/powerplatform-actions/actions-install@v1
 
-      - name: Run a one-line script
-        run: echo Hello from Octo Organization
+      - name: Install Pac CLI
+        shell: bash
+        run: |
+          echo "Installing Pac CLI"
+          dotnet tool install --global Microsoft.PowerApps.CLI.Tool
+
+
+      - name: Run test
+        shell: bash
+        run: |
+          export user1Email="${{secrets.TESTUSER}}"
+          export user1Password="${{secrets.TESTUSERPSW}}"
+          pac test run --test-plan-file .\SmokeTestSuite.yaml -env 4d3c1075-e53d-ee35-ad75-40c6f5edd705 \
+              --tenant ${{secrets.PPTENANTID}}
+        
+
+      
