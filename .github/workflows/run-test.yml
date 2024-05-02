@@ -26,9 +26,18 @@ jobs:
         shell: bash
         run: |
           set -e
+
+          ref=${{ github.ref }}
+          echo "Ref: $ref"
+          branch="${ref#refs/heads/dev/}"
+          echo "$branch"
+          # Get the environment Id (the row before the last row contains the information)
+          rawOutput=$(pac admin list --name $branch | tail -n 2)
+          environmentId=$(echo $rawOutput | cut -d ' ' -f 2)
+
           export user1Email="${{secrets.TESTUSER}}"
           export user1Password="${{secrets.TESTUSERPSW}}"
-          pac test run --test-plan-file ./test/SmokeTestSuite.yaml -env 4d3c1075-e53d-ee35-ad75-40c6f5edd705 \
+          pac test run --test-plan-file ./test/SmokeTestSuite.yaml -env $environmentId \
               --tenant ${{secrets.PPTENANTID}}
       
       - name: Upload artifacts
