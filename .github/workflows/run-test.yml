@@ -25,6 +25,7 @@ jobs:
       - name: Run test
         shell: bash
         run: |
+          set -e
           export user1Email="${{secrets.TESTUSER}}"
           export user1Password="${{secrets.TESTUSERPSW}}"
           pac test run --test-plan-file ./test/SmokeTestSuite.yaml -env 4d3c1075-e53d-ee35-ad75-40c6f5edd705 \
