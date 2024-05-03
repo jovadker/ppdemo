@@ -1,0 +1,11 @@
+<environmentvariabledefinition schemaname="mpa_AppInsightsKey">
+  <defaultvalue>d0c7a1f2-cab1-47bf-b863-59ec3a2fb359</defaultvalue>
+  <displayname default="AppInsightKey">
+    <label description="AppInsightKey" languagecode="1033" />
+  </displayname>
+  <introducedversion>0.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

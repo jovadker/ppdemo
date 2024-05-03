@@ -206,7 +206,7 @@
         conPeopleSelect_MainPage As groupContainer.verticalAutoLayoutContainer:
             Fill: =ColorValue(varThemeColors.backgroundFill)
             FillPortions: =0
-            Height: =400 + If(Or(cmbPeoplePicker_MainPage.Selected.UserPrincipalName in AddColumns('Opt-out Users', "Email", User.'Primary Email').Email,cmbPeoplePicker_MainPage.Selected.UserPrincipalName = User().Email), lblOptOutError_MainPage.Height + 20)
+            Height: =400 + If(Or(cmbPeoplePicker_MainPage.Selected.UserPrincipalName in AddColumns('Opt-out Users', Email, User.'Primary Email').Email,cmbPeoplePicker_MainPage.Selected.UserPrincipalName = User().Email), lblOptOutError_MainPage.Height + 20)
             LayoutAlignItems: =LayoutAlignItems.Center
             LayoutDirection: =LayoutDirection.Vertical
             LayoutGap: =15
@@ -300,9 +300,9 @@
                     )
                 BorderColor: |-
                     =/*Show Error color of Border if Selected User is in the Active Opt Out User list, or is the logged in User*/ 
-                    If(Or(Self.Selected.UserPrincipalName in AddColumns(Filter('Opt-out Users', 'Opt-out Users (Views)'.'Active Opt-out Users'), "Email", User.'Primary Email').Email,cmbPeoplePicker_MainPage.Selected.UserPrincipalName = User().Email), ColorValue(varThemeColors.error),
+                    If(Or(Self.Selected.UserPrincipalName in AddColumns(Filter('Opt-out Users', 'Opt-out Users (Views)'.'Active Opt-out Users'), Email, User.'Primary Email').Email,cmbPeoplePicker_MainPage.Selected.UserPrincipalName = User().Email), ColorValue(varThemeColors.error),
                     ColorValue(varThemeColors.disabledText))
-                BorderThickness: =If(Self.Selected.UserPrincipalName in AddColumns(Filter('Opt-out Users', 'Opt-out Users (Views)'.'Active Opt-out Users'), "Email", User.'Primary Email').Email, 4, 1)
+                BorderThickness: =If(Self.Selected.UserPrincipalName in AddColumns(Filter('Opt-out Users', 'Opt-out Users (Views)'.'Active Opt-out Users'), Email, User.'Primary Email').Email, 4, 1)
                 ChevronBackground: =ColorValue(varThemeColors.backgroundFill)
                 ChevronDisabledBackground: =ColorValue(varThemeColors.backgroundFillDisabled)
                 ChevronDisabledFill: |
@@ -362,7 +362,7 @@
                 PressedFill: =ColorValue(varThemeColors.backgroundFill)
                 SearchFields: =["DisplayName"]
                 SearchItems: |-
-                    =Search(Office365Users.SearchUser({searchTerm: Self.SearchText,top:15}),cmbPeoplePicker_MainPage.SearchText,"DisplayName")
+                    =Search(Office365Users.SearchUser({searchTerm: Self.SearchText,top:15}),cmbPeoplePicker_MainPage.SearchText,DisplayName)
                 SelectionColor: =ColorValue(varThemeColors.altText)
                 SelectionFill: =ColorValue(varThemeColors.tertiary)
                 SelectionTagColor: =ColorValue(varThemeColors.altText)
@@ -399,7 +399,7 @@
                     =varThemeFont.paragraph.size
                 Text: |+
                     =With(
-                        {Text: If(cmbPeoplePicker_MainPage.Selected.UserPrincipalName in AddColumns(Filter('Opt-out Users', 'Opt-out Users (Views)'.'Active Opt-out Users'), "Email", User.'Primary Email').Email, "Note: This user has opted out of the kudos program.","You can’t submit a kudo for yourself.")},
+                        {Text: If(cmbPeoplePicker_MainPage.Selected.UserPrincipalName in AddColumns(Filter('Opt-out Users', 'Opt-out Users (Views)'.'Active Opt-out Users'), Email, User.'Primary Email').Email, "Note: This user has opted out of the kudos program.","You can’t submit a kudo for yourself.")},
                         // Check if a localized text exists for "Text" in the user's preferred language
                         If(
                             // If the localized text is blank, return the default text
@@ -419,7 +419,7 @@
                     )
                     
                 Visible: |-
-                    =Or(cmbPeoplePicker_MainPage.Selected.UserPrincipalName in AddColumns(Filter('Opt-out Users', 'Opt-out Users (Views)'.'Active Opt-out Users'), "Email", User.'Primary Email').Email,cmbPeoplePicker_MainPage.Selected.UserPrincipalName = User().Email)
+                    =Or(cmbPeoplePicker_MainPage.Selected.UserPrincipalName in AddColumns(Filter('Opt-out Users', 'Opt-out Users (Views)'.'Active Opt-out Users'), Email, User.'Primary Email').Email,cmbPeoplePicker_MainPage.Selected.UserPrincipalName = User().Email)
                     /*Show error if Selected User is in the Active Opt Out User list, or is the logged in User*/
                 Width: =cmbPeoplePicker_MainPage.Width
                 X: =imgPFPGallery_MainPage.Width + imgPFPGallery_MainPage.X
@@ -435,7 +435,7 @@
                 DisabledColor: =ColorValue(varThemeColors.disabledText)
                 DisabledFill: =ColorValue(varThemeColors.backgroundFillDisabled)
                 DisplayMode: |-
-                    =If(Len(cmbPeoplePicker_MainPage.Selected.Id) = 0 || cmbPeoplePicker_MainPage.Selected.UserPrincipalName in AddColumns(Filter('Opt-out Users', 'Opt-out Users (Views)'.'Active Opt-out Users'), "Email", User.'Primary Email').Email || cmbPeoplePicker_MainPage.Selected.UserPrincipalName = User().Email, DisplayMode.Disabled, DisplayMode.Edit)
+                    =If(Len(cmbPeoplePicker_MainPage.Selected.Id) = 0 || cmbPeoplePicker_MainPage.Selected.UserPrincipalName in AddColumns(Filter('Opt-out Users', 'Opt-out Users (Views)'.'Active Opt-out Users'), Email, User.'Primary Email').Email || cmbPeoplePicker_MainPage.Selected.UserPrincipalName = User().Email, DisplayMode.Disabled, DisplayMode.Edit)
                     
                     /*Disable the button if Selected User is in the Active Opt Out User list, or is the logged in User*/ 
                 Fill: =ColorValue(varThemeColors.primary)
@@ -543,6 +543,7 @@
                 ZIndex: =1
 
             "galMyKudos_MainPage As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+                '#CopilotOverlayLabel': ="Filtered"
                 AccessibleLabel: |-
                     =// Define a variable named "Text" with the value "{value}"
                     With(

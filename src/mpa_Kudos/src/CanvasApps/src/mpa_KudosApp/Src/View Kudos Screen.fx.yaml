@@ -833,6 +833,7 @@
                 ZIndex: =1
 
             "galMyKudos_ViewKudos As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+                '#CopilotOverlayLabel': ="Filtered"
                 AccessibleLabel: |-
                     =// Define a variable named "Text" with the value "{value}"
                     With(

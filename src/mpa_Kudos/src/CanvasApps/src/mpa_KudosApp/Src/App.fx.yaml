@@ -144,7 +144,8 @@ App As appinfo:
                 )
             )
         );
-        RenameColumns(colMonthFilter, "Value", "Month Name");
+        RenameColumns(colMonthFilter, Value, 'Month Name');
+    StartScreen: =
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

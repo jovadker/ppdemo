@@ -2,7 +2,7 @@
   "properties": {
     "connectionReferences": {
       "shared_office365_1": {
-        "runtimeSource": "invoker",
+        "runtimeSource": "embedded",
         "connection": {
           "connectionReferenceLogicalName": "mpa_KudosOutlook"
         },
@@ -11,7 +11,7 @@
         }
       },
       "shared_office365users_1": {
-        "runtimeSource": "invoker",
+        "runtimeSource": "embedded",
         "connection": {
           "connectionReferenceLogicalName": "mpa_KudosO365"
         },
@@ -144,9 +144,9 @@
           "type": "OpenApiConnection",
           "inputs": {
             "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365",
               "connectionName": "shared_office365_1",
-              "operationId": "SendEmailV2",
-              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+              "operationId": "SendEmailV2"
             },
             "parameters": {
               "emailMessage/To": "@triggerBody()['text_1']",
@@ -156,7 +156,10 @@
               "emailMessage/Cc": "@triggerBody()['text_3']",
               "emailMessage/ReplyTo": "@triggerBody()['text_8']"
             },
-            "authentication": "@parameters('$authentication')"
+            "authentication": {
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']",
+              "type": "Raw"
+            }
           },
           "description": "To: Recipient of the Kudo, CC: Recipient manager"
         },
@@ -172,14 +175,17 @@
           "type": "OpenApiConnection",
           "inputs": {
             "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365users",
               "connectionName": "shared_office365users_1",
-              "operationId": "UserPhoto_V2",
-              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365users"
+              "operationId": "UserPhoto_V2"
             },
             "parameters": {
               "id": "@triggerBody()['text_8']"
             },
-            "authentication": "@parameters('$authentication')"
+            "authentication": {
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']",
+              "type": "Raw"
+            }
           },
           "description": "Get photo from O365 using the Sender email"
         },

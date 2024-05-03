@@ -1,0 +1,68 @@
+"'b03216f5-bac7-4940-9e03-b876ec5f3eb2' As TestSuite":
+    Description: =""
+    DisplayName: ="SmokeTestSuite"
+
+    "'5a5d2496-6498-4538-b160-83aa09f5f7e5' As TestCase":
+        Description: =""
+        DisplayName: ="PraiseTest"
+
+        Step1 As TestStep:
+            Description: ="Select 'btnGetStarted_LandingScreen'"
+            Screen: =Landing Screen
+            Value: =Select(btnGetStarted_LandingScreen)
+
+        Step3 As TestStep:
+            Description: ="Select 'cmbPeoplePicker_MainPage'"
+            Screen: =Main Page Screen
+            Value: =Select(cmbPeoplePicker_MainPage)
+
+        Step4 As TestStep:
+            Description: ="Select"
+            Value: |-
+                =SetProperty(cmbPeoplePicker_MainPage.SelectedItems, Table({Id:"00000",AccountEnabled:true,BusinessPhones:Table(),City:Blank(),CompanyName:Blank(),Country:Blank(),Department:Blank(),DisplayName:"Maker Colleague A",GivenName:"Maker A",JobTitle:Blank(),Mail:"makera@jovadkere5.onmicrosoft.com",MailNickname:"makera",mobilePhone:Blank(),OfficeLocation:Blank(),PostalCode:Blank(),Surname:"Vadkerti",TelephoneNumber:Blank(),UserPrincipalName:"makera@jovadkere5.onmicrosoft.com"}))
+
+        Step5 As TestStep:
+            Description: ="Select 'cmbPeoplePicker_MainPage'"
+            Screen: =Main Page Screen
+            Value: =Select(cmbPeoplePicker_MainPage)
+
+        Step6 As TestStep:
+            Description: ="Select 'btnNextPeopleSelect_MainPage'"
+            Screen: =Main Page Screen
+            Value: =Select(btnNextPeopleSelect_MainPage)
+
+        Step7 As TestStep:
+            Description: ="Select 'btnSelectBadgeGallery_BadgeSelection' in row 1 in 'galBadgeGallery_BadgeSelection'"
+            Screen: =Badge Selection Screen
+            Value: =Select(galBadgeGallery_BadgeSelection, 1, btnSelectBadgeGallery_BadgeSelection)
+
+        Step8 As TestStep:
+            Description: ="Select 'btnSubmit_BadgeSelection'"
+            Screen: =Badge Selection Screen
+            Value: =Select(btnSubmit_BadgeSelection)
+
+        Step9 As TestStep:
+            Description: ="Set 'txtSubject_Message'.Text to ""Great"""
+            Screen: =Message Screen
+            Value: =SetProperty(txtSubject_Message.Text, "Great")
+
+        Step10 As TestStep:
+            Description: ="Set 'txtMessage_Message'.Text to ""Awesome"""
+            Screen: =Message Screen
+            Value: =SetProperty(txtMessage_Message.Text, "Awesome")
+
+        Step11 As TestStep:
+            Description: ="Select 'btnSubmit_Message'"
+            Screen: =Message Screen
+            Value: =Select(btnSubmit_Message)
+
+        Step12 As TestStep:
+            Description: ="Select 'btnSubmitKudo_Submission'"
+            Screen: =Submission Screen
+            Value: =Select(btnSubmitKudo_Submission)
+
+        Step2 As TestStep:
+            Description: ="Select 'btnSucess_Success'"
+            Screen: =Success Screen
+            Value: =Select(btnSucess_Success)
+

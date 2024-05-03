@@ -1,7 +1,7 @@
 [
   {
     "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
-    "FlowNameId": "aa9482d8-82d4-4e7b-adff-d908ab343fff",
+    "FlowNameId": "cfe433b7-234d-4ecc-8121-142225b4eae5",
     "Name": "KudosApp-Notificationemail",
     "ServiceKind": "ConnectedWadl",
     "Type": "ServiceInfo",

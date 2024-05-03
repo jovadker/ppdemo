@@ -1,29 +1,11 @@
 {
-  "5e88544e-475c-4642-8613-bc076ddaaa1a": {
-    "appActions": [],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Office 365 Users",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1677/1.0.1677.3637/office365users/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "9bbc9773-43b2-4f4e-afd5-13c7ea3d394e"
-    ],
-    "id": "5e88544e-475c-4642-8613-bc076ddaaa1a"
-  },
-  "94e470c4-0c8f-4fca-8670-a4d60d09d8b9": {
+  "43f7223f-805a-4510-afaa-b7dee3465f55": {
     "appActions": [],
     "connectionRef": {
       "apiTier": "Premium",
       "bypassConsent": true,
       "displayName": "Microsoft Dataverse",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1679/1.0.1679.3643/commondataserviceforapps/icon.png",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1684/1.0.1684.3697/commondataserviceforapps/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_commondataserviceforapps",
       "parameterHints": {},
       "parameterHintsV2": {}
@@ -34,7 +16,7 @@
     "dependents": [
       "a31cc39b-522f-4e9b-ade6-a2f200eb5b68"
     ],
-    "id": "94e470c4-0c8f-4fca-8670-a4d60d09d8b9"
+    "id": "43f7223f-805a-4510-afaa-b7dee3465f55"
   },
   "9bbc9773-43b2-4f4e-afd5-13c7ea3d394e": {
     "appActions": [
@@ -43,34 +25,40 @@
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1686/1.0.1686.3699/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "5e88544e-475c-4642-8613-bc076ddaaa1a": {
+        "a63d4a79-8b85-4b36-bf6e-3b5f6318519d": {
           "value": "shared_office365users_1"
         },
-        "dbd201a2-493b-466a-a23b-2f4a2e329a6f": {
+        "e42089d3-8f06-4b52-a98e-4ce9ad154e60": {
           "value": "shared_office365_1"
+        },
+        "workflowDisplayName": {
+          "value": "Kudos App - Notification email "
         },
         "workflowEntityId": {
           "value": "6b503259-37c7-ed11-b597-00224803a83a"
         },
         "workflowName": {
-          "value": "6aaa5593-90c8-45c8-bd45-8b1542431e90"
+          "value": "000f9041-2079-84b0-137a-6b96f2b7775b"
         }
       },
       "parameterHintsV2": {
         "shared_office365_1": {
-          "value": "dbd201a2-493b-466a-a23b-2f4a2e329a6f"
+          "value": "e42089d3-8f06-4b52-a98e-4ce9ad154e60"
         },
         "shared_office365users_1": {
-          "value": "5e88544e-475c-4642-8613-bc076ddaaa1a"
+          "value": "a63d4a79-8b85-4b36-bf6e-3b5f6318519d"
+        },
+        "workflowDisplayName": {
+          "value": "Kudos App - Notification email "
         },
         "workflowEntityId": {
           "value": "6b503259-37c7-ed11-b597-00224803a83a"
         },
         "workflowName": {
-          "value": "6aaa5593-90c8-45c8-bd45-8b1542431e90"
+          "value": "000f9041-2079-84b0-137a-6b96f2b7775b"
         }
       }
     },
@@ -79,8 +67,8 @@
       "KudosApp-Notificationemail"
     ],
     "dependencies": {
-      "shared_office365_1": "dbd201a2-493b-466a-a23b-2f4a2e329a6f",
-      "shared_office365users_1": "5e88544e-475c-4642-8613-bc076ddaaa1a"
+      "shared_office365_1": "e42089d3-8f06-4b52-a98e-4ce9ad154e60",
+      "shared_office365users_1": "a63d4a79-8b85-4b36-bf6e-3b5f6318519d"
     },
     "dependents": [],
     "id": "9bbc9773-43b2-4f4e-afd5-13c7ea3d394e"
@@ -92,28 +80,34 @@
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1686/1.0.1686.3699/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "94e470c4-0c8f-4fca-8670-a4d60d09d8b9": {
-          "value": "shared_commondataserviceforapps"
+        "43f7223f-805a-4510-afaa-b7dee3465f55": {
+          "value": "shared_commondataserviceforapps_1"
+        },
+        "workflowDisplayName": {
+          "value": "Kudo App - Share Kudo with Sender, Assign to Recipient"
         },
         "workflowEntityId": {
           "value": "9985ea58-32c4-ed11-83ff-00224803a83a"
         },
         "workflowName": {
-          "value": "85429999-8f67-4827-b6dc-76a7254e75ee"
+          "value": "173b56ff-6387-b169-67be-3aac5c575942"
         }
       },
       "parameterHintsV2": {
-        "shared_commondataserviceforapps": {
-          "value": "94e470c4-0c8f-4fca-8670-a4d60d09d8b9"
+        "shared_commondataserviceforapps_1": {
+          "value": "43f7223f-805a-4510-afaa-b7dee3465f55"
+        },
+        "workflowDisplayName": {
+          "value": "Kudo App - Share Kudo with Sender, Assign to Recipient"
         },
         "workflowEntityId": {
           "value": "9985ea58-32c4-ed11-83ff-00224803a83a"
         },
         "workflowName": {
-          "value": "85429999-8f67-4827-b6dc-76a7254e75ee"
+          "value": "173b56ff-6387-b169-67be-3aac5c575942"
         }
       }
     },
@@ -122,7 +116,7 @@
       "KudoApp-ShareKudowithSender,AssigntoRecipient"
     ],
     "dependencies": {
-      "shared_commondataserviceforapps": "94e470c4-0c8f-4fca-8670-a4d60d09d8b9"
+      "shared_commondataserviceforapps_1": "43f7223f-805a-4510-afaa-b7dee3465f55"
     },
     "dependents": [],
     "id": "a31cc39b-522f-4e9b-ade6-a2f200eb5b68"
@@ -149,10 +143,12 @@
       "Office365Users"
     ],
     "dependencies": {},
-    "dependents": [],
+    "dependents": [
+      "9bbc9773-43b2-4f4e-afd5-13c7ea3d394e"
+    ],
     "id": "a63d4a79-8b85-4b36-bf6e-3b5f6318519d"
   },
-  "dbd201a2-493b-466a-a23b-2f4a2e329a6f": {
+  "e42089d3-8f06-4b52-a98e-4ce9ad154e60": {
     "appActions": [],
     "connectionRef": {
       "apiTier": "Standard",
@@ -168,6 +164,6 @@
     "dependents": [
       "9bbc9773-43b2-4f4e-afd5-13c7ea3d394e"
     ],
-    "id": "dbd201a2-493b-466a-a23b-2f4a2e329a6f"
+    "id": "e42089d3-8f06-4b52-a98e-4ce9ad154e60"
   }
 }

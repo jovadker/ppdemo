@@ -1,7 +1,7 @@
 [
   {
     "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
-    "FlowNameId": "26c8193d-0205-432e-b34c-abbb9b366901",
+    "FlowNameId": "716cfa98-47ef-42ed-8d72-340ea1eb5eb9",
     "Name": "KudoApp-ShareKudowithSender,AssigntoRecipient",
     "ServiceKind": "ConnectedWadl",
     "Type": "ServiceInfo",

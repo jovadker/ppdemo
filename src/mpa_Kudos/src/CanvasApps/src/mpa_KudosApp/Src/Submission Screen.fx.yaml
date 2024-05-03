@@ -351,7 +351,7 @@
                         )
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, "mpa_title")
+                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, mpa_title)
                     Required: =true
                     Update: =txtSubject_crdSubject_Submission.Text
                     Width: =614
@@ -448,7 +448,7 @@
                         With({RecipientEmail: varNewSubmission.RecipientEmail},
                         LookUp(Users,internalemailaddress = RecipientEmail))
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,"mpa_recipientid")
+                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,mpa_recipientid)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -543,10 +543,10 @@
                         =varNewSubmission.Recipient.DisplayName
                         /*Selected user display name*/
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,"mpa_recipientname")
+                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,mpa_recipientname)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, "mpa_recipientname")
+                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, mpa_recipientname)
                     Required: =false
                     Update: =txtRecipientName_crdRecipientName_Submission.Text
                     Visible: =false
@@ -638,7 +638,7 @@
                         With({SenderEmail: varSenderEmail},
                         LookUp(Users,internalemailaddress = SenderEmail))
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,"mpa_senderid")
+                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,mpa_senderid)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -733,10 +733,10 @@
                         =Left(varSenderProfile.DisplayName,500)
                         /*Sender's name from O365, topped to 500 characters (max lenght in dataverse)*/
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,"mpa_sendername")
+                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,mpa_sendername)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, "mpa_sendername")
+                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, mpa_sendername)
                     Required: =false
                     Update: =txtSenderName_crdSenderName_Submission.Text
                     Visible: =false
@@ -833,10 +833,10 @@
                             Left(varSenderProfile.Department,200)
                         )
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,"mpa_senderdepartment")
+                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,mpa_senderdepartment)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, "mpa_senderdepartment")
+                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, mpa_senderdepartment)
                     Required: =false
                     Update: =txtSDpto_crdSDpto_Submission.Text
                     Visible: =false
@@ -925,10 +925,10 @@
                         =/*Current Year*/
                         Year(Now())
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,"mpa_year")
+                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,mpa_year)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, "mpa_year")
+                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, mpa_year)
                     Required: =true
                     Update: =txtYear_crdYear_Submission.Text
                     Visible: =false
@@ -1015,7 +1015,7 @@
                     DataField: ="mpa_monthnumber"
                     Default: =varCurrentMonth /*Numeric value of the current month*/
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,"mpa_monthnumber")
+                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,mpa_monthnumber)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =true
@@ -1111,10 +1111,10 @@
                             )
                         )
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,"mpa_recipientcountry")
+                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,mpa_recipientcountry)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, "mpa_recipientcountry")
+                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, mpa_recipientcountry)
                     Required: =false
                     Update: =txtRCountry_crdRCountry_Submission.Text
                     Visible: =false
@@ -1207,10 +1207,10 @@
                             Left(varRecipientProfile.Department,200)
                         )
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,"mpa_recipientdepartment")
+                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,mpa_recipientdepartment)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, "mpa_recipientdepartment")
+                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, mpa_recipientdepartment)
                     Required: =false
                     Update: =txtRDpto_crdRDepto_Submission.Text
                     Visible: =false
@@ -1303,10 +1303,10 @@
                             Left(varRecipientProfile.JobTitle,200)
                         )
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,"mpa_recipientjobtitle")
+                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,mpa_recipientjobtitle)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, "mpa_recipientjobtitle")
+                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, mpa_recipientjobtitle)
                     Required: =false
                     Update: =txtRTitlecrdRTitle_Submission.Text
                     Visible: =false
@@ -1398,10 +1398,10 @@
                             Left(varManagerName,500)
                         )
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,"mpa_recipientmanager")
+                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,mpa_recipientmanager)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, "mpa_recipientmanager")
+                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, mpa_recipientmanager)
                     Required: =false
                     Update: =txtRManager_crdRManager_Submission.Text
                     Visible: =false
@@ -1494,10 +1494,10 @@
                         )
                         
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,"mpa_recipientmanageremail")
+                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,mpa_recipientmanageremail)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, "mpa_recipientmanageremail")
+                    MaxLength: =DataSourceInfo([@Kudos], DataSourceInfo.MaxLength, mpa_recipientmanageremail)
                     Required: =false
                     Update: =txtManagerEMail_crdRManagerEmail_Submission.Text
                     Visible: =false
@@ -1583,7 +1583,7 @@
                     DataField: ="mpa_Badge"
                     Default: =varNewSubmission.SelectedBadge
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,"mpa_Badge")
+                    DisplayName: =DataSourceInfo([@Kudos],DataSourceInfo.DisplayName,mpa_Badge)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -1615,7 +1615,7 @@
                         Items: =Choices([@Kudos].Badge)
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         SearchFields: =["mpa_name"]
-                        SearchItems: =Search(Choices([@Kudos].Badge),DataCardValue1.SearchText,"mpa_name")
+                        SearchItems: =Search(Choices([@Kudos].Badge),DataCardValue1.SearchText,mpa_name)
                         SelectMultiple: =false
                         Size: =21
                         Tooltip: =Parent.DisplayName
