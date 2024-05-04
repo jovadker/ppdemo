@@ -14,6 +14,9 @@ You can find here examples and GitHub workflows how to:
 
 The original Kudos application was copied from https://github.com/microsoft/Templates-for-Power-Platform and was modified to have depending solutions and the deployment package in the same folder structure. 
 
+## Details
+We use one of the applications available in the Power Platform Enterprise template to demonstrate the end-to-end scenario of DevOps processes. This application is the Kudos app that we can use to praise others for their outstanding achievements. The available solution provides a model-driven application to administer the kudos, opt out users and create badges that can be used in the canvas app to fill out the kudos. This latter canvas app called “Kudos app” in the solution provides the user interface for users in the organization. Since the Kudos solution depends on the Employee Experience base solution, we will learn how we can manage two solutions together by introducing multiple GitHub workflows in the release train and leveraging the deployment package. We will define the branch strategy for this application together, we will delve into the different GitHub workflows with DevSecOps tasks to manage the development of these solutions. We will introduce Backlog management and we will use the branch policies to protect our main branch from accidental changes. We will create tests for the Kudos app, and we will introduce monitoring on our app and flows. Finally, we will learn about feature flags and how we can use them to enable or disable certain features in our applications
+
 ## Usage
 
 Fork this repository and change the workflow parameters, GitHub environments and GitHub secrets adjusted to your Power Platform tenant and Microsoft Azure subscription.
