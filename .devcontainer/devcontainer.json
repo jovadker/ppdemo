@@ -10,6 +10,13 @@
 		"ghcr.io/devcontainers/features/powershell:1": {},
 		"ghcr.io/devcontainers-contrib/features/bash-command:1": {},
 		"ghcr.io/devcontainers/features/dotnet:2": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"microsoft-IsvExpTools.powerplatform-vscode"
+			]
+		}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
