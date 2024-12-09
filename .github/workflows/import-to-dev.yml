@@ -55,7 +55,7 @@ jobs:
             --tenant ${{secrets.PPTENANTID}}
 
         - name: Fetch the unmanaged solution from GH artifact store
-          uses: actions/download-artifact@v2
+          uses: actions/download-artifact@v4.1.7
           with:
              name: unmanagedSolutions
              path: ${{ env.solution_release_folder}}
